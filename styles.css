@@ -1,6 +1,12 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background: #0B0A08;
     font-family: 'Inter', sans-serif;
+    position: relative;
 }
 
 /* Animations */
@@ -104,6 +110,38 @@ body {
 /* Navigation */
 .navbar-shell {
     overflow: hidden;
+}
+
+section,
+nav,
+footer {
+    overflow-x: hidden;
+}
+
+.section-divider {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(600px, 90vw);
+}
+
+.hero-glow {
+    max-width: min(24rem, 60vw);
+    max-height: min(24rem, 60vw);
+}
+
+.hero-glow-secondary {
+    max-width: min(16rem, 45vw);
+    max-height: min(16rem, 45vw);
+}
+
+.section-blob {
+    max-width: min(24rem, 70vw);
+    max-height: min(24rem, 70vw);
+}
+
+.section-blob-secondary {
+    max-width: min(16rem, 55vw);
+    max-height: min(16rem, 55vw);
 }
 
 .nav-link {
