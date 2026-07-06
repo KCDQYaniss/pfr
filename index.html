@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Provence Façade Rénovation — Façadier à Cavaillon</title>
-    <!-- Favicon -->
     <link rel="icon" href="logopfr.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -19,17 +18,21 @@
         };
     </script>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body class="text-white antialiased">
 
     <!-- ============ NAVBAR ============ -->
     <nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-between h-16 px-6 rounded-xl bg-[#0B0A08]/80 backdrop-blur-xl border border-white/5">
-                <a href="#accueil" class="flex items-center gap-3">
-                    <!-- LOGO -->
-                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-9 w-auto rounded-lg" />
-                    <span class="text-base sm:text-lg font-semibold tracking-tight">Provence <span class="text-neutral-400 font-normal">Façade Rénovation</span></span>
+            <div class="flex items-center justify-between h-16 px-4 sm:px-6 rounded-xl bg-[#0B0A08]/80 backdrop-blur-xl border border-white/5">
+                <a href="#accueil" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-8 sm:h-9 w-auto rounded-lg" />
+                    <span class="text-sm sm:text-lg font-semibold tracking-tight whitespace-nowrap">Provence <span class="text-neutral-400 font-normal hidden sm:inline">Façade Rénovation</span></span>
                 </a>
 
                 <div class="hidden md:flex items-center gap-8">
@@ -40,7 +43,7 @@
                     <a href="#contact" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Contact</a>
                 </div>
 
-                <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
                     <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-neutral-400 hover:text-white transition-colors">
                         <i data-lucide="phone" class="w-3.5 h-3.5"></i>
                         06.25.28.49.23
@@ -80,26 +83,22 @@
         <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[#C49A6C]/10 rounded-full blur-[80px] pulse-glow" style="animation-delay: 1.5s;"></div>
 
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 text-center">
-            <!-- Badge -->
             <div class="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4835A]/10 border border-[#D4835A]/20 mb-8">
                 <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-[#D4835A]"></i>
                 <span class="text-xs font-medium text-neutral-300 tracking-wide">Artisans façadiers — Cavaillon</span>
             </div>
 
-            <!-- Title -->
             <h1 class="animate-fade-in-up delay-200 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6">
                 <span class="text-white">Rénovation</span><br />
                 <span class="text-white">de façades</span>
                 <span class="text-[#D4835A]">.</span>
             </h1>
 
-            <!-- Subtitle -->
             <p class="animate-fade-in-up delay-400 text-lg sm:text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
                 Spécialistes du ravalement, de la peinture et du renouveau de façades à Cavaillon et ses environs.
                 Un savoir-faire de <span class="text-white font-normal">plus de 30 ans</span>.
             </p>
 
-            <!-- CTA Buttons -->
             <div class="animate-fade-in-up delay-600 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="#contact" class="btn-primary text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2">
                     <i data-lucide="phone" class="w-4 h-4"></i>
@@ -111,7 +110,6 @@
                 </a>
             </div>
 
-            <!-- Stats -->
             <div class="animate-fade-in-up delay-800 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto">
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="30">0</div>
@@ -214,7 +212,6 @@
                 <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">Découvrez quelques-uns de nos projets récents à Cavaillon et dans le Vaucluse.</p>
             </div>
 
-            <!-- Filter tabs -->
             <div class="flex flex-wrap justify-center gap-2 mb-10 scroll-reveal">
                 <button class="filter-btn active text-sm font-medium px-5 py-2 rounded-full border border-white/10 bg-[#D4835A]/20 text-white transition-all hover:bg-[#D4835A]/30" data-filter="all">Tous</button>
                 <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="ravalement">Ravalement</button>
@@ -223,7 +220,6 @@
                 <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="nettoyage">Nettoyage</button>
             </div>
 
-            <!-- Gallery grid -->
             <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" onclick="openLightbox(this)">
                     <div class="aspect-[4/3]">
@@ -352,12 +348,10 @@
 
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <!-- Image side -->
                 <div class="scroll-reveal relative">
                     <div class="rounded-[2rem] overflow-hidden border border-white/5">
                         <img src="https://picsum.photos/seed/pfr-equipe-artisans/800/900.jpg" alt="Équipe Provence Façade Rénovation" class="w-full h-[500px] object-cover" />
                     </div>
-                    <!-- Floating card RGE -->
                     <div class="absolute -bottom-6 -right-4 sm:right-6 bg-[#1A1A1A] border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 flex items-center justify-center">
@@ -369,7 +363,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Floating card équipe -->
                     <div class="absolute -top-4 -left-4 sm:left-6 bg-[#1A1A1A] border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 flex items-center justify-center">
@@ -383,7 +376,6 @@
                     </div>
                 </div>
 
-                <!-- Text side -->
                 <div class="scroll-reveal" style="transition-delay: 200ms;">
                     <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Qui sommes-nous</span>
                     <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-6">Un savoir-faire<br />d'<span class="text-[#D4835A]">artisans</span> engagés</h2>
@@ -476,9 +468,7 @@
             </div>
 
             <div class="grid lg:grid-cols-5 gap-8">
-                <!-- Contact info -->
                 <div class="lg:col-span-2 space-y-6 scroll-reveal">
-                    <!-- Phone -->
                     <a href="tel:0625284923" class="block rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
                         <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="phone" class="w-5 h-5 text-[#D4835A]"></i>
@@ -489,7 +479,6 @@
                         </div>
                     </a>
 
-                    <!-- Email -->
                     <a href="mailto:contact@pfrdevis.fr" class="block rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
                         <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="mail" class="w-5 h-5 text-[#D4835A]"></i>
@@ -500,7 +489,6 @@
                         </div>
                     </a>
 
-                    <!-- Hours -->
                     <div class="rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
                         <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="clock" class="w-5 h-5 text-[#D4835A]"></i>
@@ -511,7 +499,6 @@
                         </div>
                     </div>
 
-                    <!-- Réponse rapide -->
                     <div class="rounded-2xl bg-gradient-to-br from-[#D4835A]/10 to-transparent border border-[#D4835A]/20 p-6">
                         <div class="flex items-center gap-3 mb-3">
                             <div class="w-10 h-10 rounded-xl bg-[#D4835A]/20 flex items-center justify-center">
@@ -523,7 +510,6 @@
                     </div>
                 </div>
 
-                <!-- Contact form -->
                 <div class="lg:col-span-3 scroll-reveal" style="transition-delay: 200ms;">
                     <form id="contactForm" class="rounded-[2rem] bg-[#181714] border border-white/5 p-8 md:p-10 space-y-6">
                         <div class="grid sm:grid-cols-2 gap-6">
@@ -577,10 +563,8 @@
     <footer class="border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-10 mb-12">
-                <!-- Brand -->
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-4">
-                        <!-- LOGO -->
                         <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-9 w-auto rounded-lg" />
                         <span class="text-base font-semibold tracking-tight">PFR</span>
                     </div>
@@ -589,7 +573,6 @@
                     </p>
                 </div>
 
-                <!-- Services -->
                 <div>
                     <h4 class="text-sm font-medium text-white mb-4">Services</h4>
                     <ul class="space-y-2.5">
@@ -601,7 +584,6 @@
                     </ul>
                 </div>
 
-                <!-- Entreprise -->
                 <div>
                     <h4 class="text-sm font-medium text-white mb-4">Entreprise</h4>
                     <ul class="space-y-2.5">
@@ -612,7 +594,6 @@
                     </ul>
                 </div>
 
-                <!-- Contact rapide -->
                 <div>
                     <h4 class="text-sm font-medium text-white mb-4">Contact</h4>
                     <ul class="space-y-2.5">
