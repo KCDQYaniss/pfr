@@ -18,24 +18,25 @@
         };
     </script>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        body {
-            overflow-x: hidden;
-        }
-    </style>
 </head>
-<body class="text-white antialiased">
+<body class="text-white antialiased overflow-x-hidden">
 
-    <!-- ============ NAVBAR ============ -->
-    <nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex items-center justify-between h-16 px-4 sm:px-6 rounded-xl bg-[#0B0A08]/80 backdrop-blur-xl border border-white/5">
-                <a href="#accueil" class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-8 sm:h-9 w-auto rounded-lg" />
-                    <span class="text-sm sm:text-lg font-semibold tracking-tight whitespace-nowrap">Provence <span class="text-neutral-400 font-normal hidden sm:inline">Façade Rénovation</span></span>
+    <!-- ============ NAVBAR (parfaitement alignée) ============ -->
+    <nav class="fixed top-0 left-0 right-0 z-50 pt-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-14 sm:h-16 px-3 sm:px-6 rounded-xl bg-[#0B0A08]/80 backdrop-blur-xl border border-white/5">
+
+                <!-- Logo + nom -->
+                <a href="#accueil" class="flex items-center gap-2 flex-shrink-0 min-w-0">
+                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-7 sm:h-9 w-auto rounded-lg flex-shrink-0" />
+                    <span class="text-sm sm:text-lg font-semibold tracking-tight whitespace-nowrap">
+                        Provence
+                        <span class="text-neutral-400 font-normal hidden sm:inline">Façade Rénovation</span>
+                    </span>
                 </a>
 
-                <div class="hidden md:flex items-center gap-8">
+                <!-- Liens desktop -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 flex-shrink-0">
                     <a href="#accueil" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Accueil</a>
                     <a href="#services" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Services</a>
                     <a href="#realisations" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Réalisations</a>
@@ -43,15 +44,16 @@
                     <a href="#contact" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Contact</a>
                 </div>
 
-                <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
-                    <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-neutral-400 hover:text-white transition-colors">
+                <!-- Droite : téléphone + boutons -->
+                <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+                    <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-neutral-400 hover:text-white transition-colors whitespace-nowrap">
                         <i data-lucide="phone" class="w-3.5 h-3.5"></i>
                         06.25.28.49.23
                     </a>
-                    <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-5 py-2.5 rounded-lg">
+                    <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-4 sm:px-5 py-2 rounded-lg whitespace-nowrap">
                         Devis gratuit
                     </a>
-                    <button id="menuToggle" class="md:hidden text-neutral-400 hover:text-white transition-colors">
+                    <button id="menuToggle" class="md:hidden text-neutral-400 hover:text-white transition-colors flex-shrink-0">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -59,7 +61,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- ============ MOBILE MENU ============ -->
     <div id="mobileMenu" class="mobile-menu">
         <button id="menuClose" class="absolute top-6 right-8 text-neutral-400 hover:text-white">
             <i data-lucide="x" class="w-7 h-7"></i>
