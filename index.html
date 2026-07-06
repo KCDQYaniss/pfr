@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Provence Façade Rénovation — Façadier Père & Fils à Cavaillon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="text-white antialiased">
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between h-16 px-6 rounded-xl bg-black/60 backdrop-blur-xl border border-white/5">
+                <a href="#accueil" class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center">
+                        <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="text-base sm:text-lg font-semibold tracking-tight">Provence <span class="text-neutral-400 font-normal">Façade Rénovation</span></span>
+                </a>
+
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#accueil" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Accueil</a>
+                    <a href="#services" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Services</a>
+                    <a href="#realisations" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Réalisations</a>
+                    <a href="#apropos" class="nav-link text-sm font-light text-neutral-400 hover:text-white">À propos</a>
+                    <a href="#contact" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Contact</a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-neutral-400 hover:text-white transition-colors">
+                        <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+                        06.25.28.49.23
+                    </a>
+                    <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-5 py-2.5 rounded-lg">
+                        Devis gratuit
+                    </a>
+                    <button id="menuToggle" class="md:hidden text-neutral-400 hover:text-white transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button id="menuClose" class="absolute top-6 right-8 text-neutral-400 hover:text-white">
+            <i data-lucide="x" class="w-7 h-7"></i>
+        </button>
+        <a href="#accueil" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Accueil</a>
+        <a href="#services" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Services</a>
+        <a href="#realisations" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Réalisations</a>
+        <a href="#apropos" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">À propos</a>
+        <a href="#contact" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Contact</a>
+        <a href="#contact" class="btn-primary text-lg font-medium px-8 py-3 rounded-lg mt-4 mobile-link">Demander un devis</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section id="accueil" class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://picsum.photos/seed/provence-facade-hero-cavaillon/1920/1080.jpg" alt="" class="w-full h-full object-cover opacity-20" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black"></div>
+        </div>
+
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[100px] pulse-glow"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] pulse-glow" style="animation-delay: 1.5s;"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 text-center">
+            <!-- Badge père-fils -->
+            <div class="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+                <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-indigo-400"></i>
+                <span class="text-xs font-medium text-neutral-400 tracking-wide">Entreprise familiale père & fils — Cavaillon</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="animate-fade-in-up delay-200 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6">
+                <span class="shimmer-text">Rénovation</span><br />
+                <span class="text-white">de façades</span>
+                <span class="text-indigo-400">.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="animate-fade-in-up delay-400 text-lg sm:text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
+                Spécialistes du ravalement, de la peinture et du renouveau de façades à Cavaillon et ses environs.
+                Un savoir-faire de <span class="text-white font-normal">plus de 30 ans.</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="animate-fade-in-up delay-600 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#contact" class="btn-primary text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i>
+                    Demander un devis gratuit
+                </a>
+                <a href="#realisations" class="btn-white text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2">
+                    <i data-lucide="images" class="w-4 h-4"></i>
+                    Voir nos réalisations
+                </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="animate-fade-in-up delay-800 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto">
+                <div class="text-center">
+                    <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="30">0</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Ans d'expérience</div>
+                </div>
+                <div class="text-center">
+                    <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="250">0</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Façades traitées</div>
+                </div>
+                <div class="text-center">
+                    <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="98">0</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">% Clients satisfaits</div>
+                </div>
+                <div class="text-center">
+                    <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="100">0</div>
+                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">% Made in Vaucluse</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+            <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5">
+                <div class="w-1 h-2.5 rounded-full bg-white/40 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-medium tracking-widest text-indigo-400 uppercase mb-4">Nos expertises</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Des services complets</h2>
+                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">De l'isolation à la décoration, nous prenons en charge l'intégralité de vos projets de façade.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group">
+                    <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="paintbrush" class="w-6 h-6 text-indigo-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ravalement de façade</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Nettoyage, réparation des fissures, enduit et peinture. Nous redonnons vie à votre façade avec des matériaux de qualité professionnelle.</p>
+                </div>
+
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="thermometer" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Isolation thermique (ITE)</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Réduction des déperditions énergétiques grâce à l'isolation par l'extérieur. Éligible aux aides MaPrimeRénov' et éco-PTZ.</p>
+                </div>
+
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="palette" class="w-6 h-6 text-amber-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Peinture extérieure</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Peinture décorative et de protection pour tous types de supports : béton, crépi, pierre.</p>
+                </div>
+
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Imperméabilisation</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Traitement hydrofuge et étanchéité de façade pour protéger votre bâtiment contre l'humidité, les infiltrations et les salissures.</p>
+                </div>
+
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="wrench" class="w-6 h-6 text-rose-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Reprise de maçonnerie</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Réparation des joints, rebouchage de fissures, reconstruction de parties endommagées. Un travail soigné pour une façade durable.</p>
+                </div>
+
+                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#161616] p-8 group" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="droplets" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Nettoyage haute pression</h3>
+                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Décapage par micro-gommage ou nettoyage haute pression. Nous éliminons mousses, lichens, pollutions et tags en toute sécurité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ RÉALISATIONS ============ -->
+    <section id="realisations" class="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[120px]"></div>
+
+        <div class="max-w-7xl mx-auto relative">
+            <div class="text-center mb-12 scroll-reveal">
+                <span class="inline-block text-xs font-medium tracking-widest text-indigo-400 uppercase mb-4">Portfolio</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Nos réalisations</h2>
+                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">Découvrez quelques-uns de nos projets récents à Cavaillon et dans le Vaucluse.</p>
+            </div>
+
+            <!-- Filter tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10 scroll-reveal">
+                <button class="filter-btn active text-sm font-medium px-5 py-2 rounded-full border border-white/10 bg-white/5 text-white transition-all hover:bg-white/10" data-filter="all">Tous</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="ravalement">Ravalement</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="ite">ITE</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="peinture">Peinture</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="nettoyage">Nettoyage</button>
+            </div>
+
+            <!-- Gallery grid -->
+            <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" onclick="openLightbox(this)">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-ravalement-avignon/800/600.jpg" alt="Ravalement immeuble Avignon" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-indigo-400 font-medium tracking-wide">RAVALEMENT</span>
+                            <h4 class="text-white font-semibold mt-1">Immeuble haussmannien — Avignon</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Ravalement complet avec enduit décoratif</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ite" onclick="openLightbox(this)" style="transition-delay: 100ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-ite-lisle/800/600.jpg" alt="ITE résidence L'Isle-sur-la-Sorgue" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-green-400 font-medium tracking-wide">ISOLATION THERMIQUE</span>
+                            <h4 class="text-white font-semibold mt-1">Résidence — L'Isle-sur-la-Sorgue</h4>
+                            <p class="text-neutral-400 text-sm mt-1">ITE polystyrène + enduit finition grattée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="peinture" onclick="openLightbox(this)" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-peinture-apt/800/600.jpg" alt="Peinture villa Apt" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-amber-400 font-medium tracking-wide">PEINTURE</span>
+                            <h4 class="text-white font-semibold mt-1">Villa — Apt</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Peinture pliolite aux tons ocre provençal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="nettoyage" onclick="openLightbox(this)">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-nettoyage-carpentras/800/600.jpg" alt="Nettoyage immeuble Carpentras" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-purple-400 font-medium tracking-wide">NETTOYAGE</span>
+                            <h4 class="text-white font-semibold mt-1">Copropriété — Carpentras</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Micro-gommage et traitement hydrofuge</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" onclick="openLightbox(this)" style="transition-delay: 100ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-ravalement-orange/800/600.jpg" alt="Ravalement maison Orange" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-indigo-400 font-medium tracking-wide">RAVALEMENT</span>
+                            <h4 class="text-white font-semibold mt-1">Maison individuelle — Orange</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Ravalement pierre naturelle + jointoiement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ite" onclick="openLightbox(this)" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-ite-salon/800/600.jpg" alt="ITE immeuble Salon-de-Provence" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-green-400 font-medium tracking-wide">ISOLATION THERMIQUE</span>
+                            <h4 class="text-white font-semibold mt-1">Immeuble — Salon-de-Provence</h4>
+                            <p class="text-neutral-400 text-sm mt-1">ITE sous enduit avec isolation des balcons</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="peinture" onclick="openLightbox(this)">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-peinture-sorgues/800/600.jpg" alt="Peinture immeuble Sorgues" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-amber-400 font-medium tracking-wide">PEINTURE</span>
+                            <h4 class="text-white font-semibold mt-1">Immeuble — Sorgues</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Réfection complète peinture + ravalement léger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" onclick="openLightbox(this)" style="transition-delay: 100ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-ravalement-cabannes/800/600.jpg" alt="Ravalement mas provençal Cabannes" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-indigo-400 font-medium tracking-wide">RAVALEMENT</span>
+                            <h4 class="text-white font-semibold mt-1">Mas provençal — Cabannes</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Enduit taloché ocre + badigeon à la chaux</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="nettoyage" onclick="openLightbox(this)" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/3]">
+                        <img src="https://picsum.photos/seed/pfr-nettoyage-eygalieres/800/600.jpg" alt="Nettoyage façade pierres Eygalières" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="gallery-overlay">
+                        <div>
+                            <span class="text-xs text-purple-400 font-medium tracking-wide">NETTOYAGE</span>
+                            <h4 class="text-white font-semibold mt-1">Façade pierres — Eygalières</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Nettoyage doux calcaire, démoisage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section id="apropos" class="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image side -->
+                <div class="scroll-reveal relative">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/5">
+                        <img src="https://picsum.photos/seed/pfr-equipe-pere-fils/800/900.jpg" alt="Équipe Provence Façade Rénovation" class="w-full h-[500px] object-cover" />
+                    </div>
+                    <!-- Floating card RGE -->
+                    <div class="absolute -bottom-6 -right-4 sm:right-6 bg-[#1A1A1A] border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
+                                <i data-lucide="award" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold text-sm">Certifié RGE</div>
+                                <div class="text-neutral-500 text-xs">Qualification reconnue</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating card père-fils -->
+                    <div class="absolute -top-4 -left-4 sm:left-6 bg-[#1A1A1A] border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold text-sm">Père & Fils</div>
+                                <div class="text-neutral-500 text-xs">Depuis + de 30 ans</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text side -->
+                <div class="scroll-reveal" style="transition-delay: 200ms;">
+                    <span class="inline-block text-xs font-medium tracking-widest text-indigo-400 uppercase mb-4">Qui sommes-nous</span>
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-6">Un savoir-faire<br />de <span class="text-indigo-400">père en fils</span></h2>
+                    <p class="text-neutral-400 font-light leading-relaxed mb-6">
+                        <strong class="text-white font-medium">Provence Façade Rénovation</strong> est une entreprise familiale cavaillonnaise. Du père au fils, la même exigence de qualité et le même respect du client depuis plus de 30 ans.
+                    </p>
+                    <p class="text-neutral-400 font-light leading-relaxed mb-8">
+                        Nous croyons qu'une <strong class="text-white font-medium">belle façade</strong> ne se limite pas à l'esthétique : c'est aussi la garantie d'un <strong class="text-white font-medium">bâtiment protégé, isolé et valorisé</strong>. Chaque projet est traité avec le même soin, de la visite technique jusqu'à la réception des travaux.
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-indigo-400"></i>
+                            </div>
+                            <span class="text-neutral-300 font-light text-sm">Entreprise <strong class="text-white font-medium">père & fils</strong> — Authenticité et confiance</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-indigo-400"></i>
+                            </div>
+                            <span class="text-neutral-300 font-light text-sm">Garantie <strong class="text-white font-medium">décennale</strong> sur tous nos travaux</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-indigo-400"></i>
+                            </div>
+                            <span class="text-neutral-300 font-light text-sm">Devis <strong class="text-white font-medium">gratuit et sans engagement</strong>.</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-indigo-400"></i>
+                            </div>
+                            <span class="text-neutral-300 font-light text-sm">Matériaux premium — <strong class="text-white font-medium">Cika, Weber, Parex</strong></span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-sm font-medium px-8 py-3.5 rounded-lg">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Prendre contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ZONE INTERVENTION ============ -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+
+        <div class="max-w-5xl mx-auto scroll-reveal">
+            <div class="rounded-[2rem] bg-gradient-to-br from-[#161616] to-[#111111] border border-white/5 p-8 md:p-12">
+                <div class="text-center mb-8">
+                    <span class="inline-block text-xs font-medium tracking-widest text-indigo-400 uppercase mb-4">Zone d'intervention</span>
+                    <h2 class="text-2xl md:text-4xl font-semibold tracking-tight mb-3">Nous intervenons autour de <span class="text-indigo-400">Cavaillon</span></h2>
+                    <p class="text-neutral-400 font-light">Dans un rayon de 50 km autour de Cavaillon</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Cavaillon</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Avignon</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">L'Isle-sur-la-Sorgue</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Apt</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Carpentras</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Orange</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Salon-de-Provence</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Sorgues</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Le Pontet</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Morières-lès-Avignon</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Cabannes</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Mollégès</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Orgon</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Eygalières</span>
+                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Saint-Andiol</span>
+                    <span class="px-4 py-2 rounded-full bg-indigo-500/20 border border-indigo-500/30 text-sm text-indigo-300 font-medium">+ toute la région PACA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="relative py-24 px-4 sm:px-6 lg:px-8">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute top-1/3 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-1/3 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto relative">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="inline-block text-xs font-medium tracking-widest text-indigo-400 uppercase mb-4">Contact</span>
+                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Parlons de votre <span class="text-indigo-400">projet</span></h2>
+                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">Décrivez-nous vos besoins, nous vous recontactons sous 48h avec un devis détaillé et gratuit.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <!-- Contact info -->
+                <div class="lg:col-span-2 space-y-6 scroll-reveal">
+                    <!-- Phone -->
+                    <a href="tel:0625284923" class="block rounded-2xl bg-[#161616] border border-white/5 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-5 h-5 text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium text-sm mb-1">Téléphone</h4>
+                            <span class="text-neutral-400 font-light text-sm">06.25.28.49.23</span>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:contact@pfrdevis.fr" class="block rounded-2xl bg-[#161616] border border-white/5 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-green-500/10 border border-green-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5 text-green-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium text-sm mb-1">Email</h4>
+                            <span class="text-neutral-400 font-light text-sm">devis@pfr.fr</span>
+                        </div>
+                    </a>
+
+                    <!-- Hours -->
+                    <div class="rounded-2xl bg-[#161616] border border-white/5 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-medium text-sm mb-1">Horaires</h4>
+                            <p class="text-neutral-400 font-light text-sm">Du Lundi au Vendredi de 7h30 à 18h00</p>
+                        </div>
+                    </div>
+
+                    <!-- Réponse rapide -->
+                    <div class="rounded-2xl bg-gradient-to-br from-indigo-500/10 to-transparent border border-indigo-500/20 p-6">
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center">
+                                <i data-lucide="zap" class="w-5 h-5 text-indigo-400"></i>
+                            </div>
+                            <h4 class="text-white font-medium text-sm">Réponse rapide</h4>
+                        </div>
+                        <p class="text-neutral-400 font-light text-sm leading-relaxed">Devis gratuit sous 48h. Appelez-nous directement pour une réponse immédiate.</p>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="lg:col-span-3 scroll-reveal" style="transition-delay: 200ms;">
+                    <form id="contactForm" class="rounded-[2rem] bg-[#161616] border border-white/5 p-8 md:p-10 space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Nom complet *</label>
+                                <input type="text" name="name" required placeholder="Jean Dupont"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/30 transition-all" />
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Téléphone *</label>
+                                <input type="tel" name="phone" required placeholder="06 12 34 56 78"
+                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/30 transition-all" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Email *</label>
+                            <input type="email" name="email" required placeholder="jean@exemple.fr"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/30 transition-all" />
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Ville du chantier</label>
+                            <input type="text" name="city" placeholder="Cavaillon, Avignon, L'Isle-sur-la-Sorgue..."
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/30 transition-all" />
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Description du projet *</label>
+                            <textarea name="message" required rows="4" placeholder="Décrivez votre façade, la surface estimée, vos attentes..."
+                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/30 transition-all resize-none"></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <p class="text-xs text-neutral-600 font-light">
+                                <i data-lucide="lock" class="w-3 h-3 inline-block mr-1"></i>
+                                Vos données sont protégées et ne seront jamais partagées.
+                            </p>
+                            <button type="submit" class="btn-primary text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2 w-full sm:w-auto justify-center">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                Envoyer ma demande
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center">
+                            <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-base font-semibold tracking-tight">PFR</span>
+                    </div>
+                    <p class="text-neutral-500 font-light text-sm leading-relaxed">
+                        Provence Façade Rénovation. Entreprise père & fils, façadier professionnel à Cavaillon depuis plus de 30 ans.
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-sm font-medium text-white mb-4">Services</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Ravalement de façade</a></li>
+                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Isolation thermique</a></li>
+                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Peinture extérieure</a></li>
+                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Imperméabilisation</a></li>
+                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Nettoyage haute pression</a></li>
+                    </ul>
+                </div>
+
+                <!-- Entreprise -->
+                <div>
+                    <h4 class="text-sm font-medium text-white mb-4">Entreprise</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="#apropos" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">À propos</a></li>
+                        <li><a href="#realisations" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Réalisations</a></li>
+                        <li><a href="#contact" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">Mentions légales</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact rapide -->
+                <div>
+                    <h4 class="text-sm font-medium text-white mb-4">Contact</h4>
+                    <ul class="space-y-2.5">
+                        <li>
+                            <a href="tel:0625284923" class="flex items-center gap-2 text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">
+                                <i data-lucide="phone" class="w-3.5 h-3.5 text-neutral-600"></i>
+                                06.25.28.49.23
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@pfrdevis.fr" class="flex items-center gap-2 text-neutral-500 font-light text-sm hover:text-indigo-400 transition-colors">
+                                <i data-lucide="mail" class="w-3.5 h-3.5 text-neutral-600"></i>
+                                contact@pfrdevis.fr
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-indigo-400 hover:border-indigo-500/30 transition-all">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-indigo-400 hover:border-indigo-500/30 transition-all">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-indigo-400 hover:border-indigo-500/30 transition-all">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-neutral-600 text-xs font-light">© 2024 Provence Façade Rénovation. Tous droits réservés.</p>
+                <p class="text-neutral-600 text-xs font-light">Façadier RGE — Garantie décennale — Assurance chantier</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="Aperçu du projet" />
+        <div id="lightboxCaption" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center">
+            <h4 class="text-white font-semibold text-lg" id="lightboxTitle"></h4>
+            <p class="text-neutral-400 text-sm mt-1" id="lightboxDesc"></p>
+        </div>
+    </div>
+
+    <!-- ============ TOAST ============ -->
+    <div id="toast" class="toast">
+        <div class="flex items-center gap-3">
+            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <div>
+                <div class="font-medium text-sm">Demande envoyée !</div>
+                <div class="text-green-400/70 text-xs mt-0.5">Nous vous recontactons sous 48h.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ SCRIPTS ============ -->
+    <script src="script.js"></script>
+</body>
+</html>
