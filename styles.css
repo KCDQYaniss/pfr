@@ -102,6 +102,10 @@ body {
 }
 
 /* Navigation */
+.navbar-shell {
+    overflow: hidden;
+}
+
 .nav-link {
     position: relative;
     transition: color 150ms;
