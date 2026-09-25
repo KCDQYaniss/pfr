@@ -87,34 +87,96 @@ lucide.createIcons();
             });
         });
 
-        // ---- Lightbox ----
+        // ---- Lightbox / Carousel ----
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightboxImg');
         const lightboxTitle = document.getElementById('lightboxTitle');
         const lightboxDesc = document.getElementById('lightboxDesc');
+        const lightboxCounter = document.getElementById('lightboxCounter');
+        const lightboxDots = document.getElementById('lightboxDots');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        let carouselImages = [];
+        let carouselIndex = 0;
+
+        function renderCarouselImage() {
+            if (!carouselImages.length) return;
+            lightboxImg.src = carouselImages[carouselIndex];
+
+            const multiple = carouselImages.length > 1;
+            lightboxPrev.style.display = multiple ? 'flex' : 'none';
+            lightboxNext.style.display = multiple ? 'flex' : 'none';
+
+            lightboxCounter.textContent = multiple ? `${carouselIndex + 1} / ${carouselImages.length}` : '';
+            lightboxCounter.style.display = multiple ? 'block' : 'none';
+
+            lightboxDots.innerHTML = '';
+            if (multiple) {
+                carouselImages.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.className = 'lightbox-dot' + (i === carouselIndex ? ' active' : '');
+                    dot.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        carouselIndex = i;
+                        renderCarouselImage();
+                    });
+                    lightboxDots.appendChild(dot);
+                });
+            }
+        }
+
+        function nextLightboxImage(e) {
+            if (e) e.stopPropagation();
+            if (!carouselImages.length) return;
+            carouselIndex = (carouselIndex + 1) % carouselImages.length;
+            renderCarouselImage();
+        }
+
+        function prevLightboxImage(e) {
+            if (e) e.stopPropagation();
+            if (!carouselImages.length) return;
+            carouselIndex = (carouselIndex - 1 + carouselImages.length) % carouselImages.length;
+            renderCarouselImage();
+        }
 
         function openLightbox(el) {
             const img = el.querySelector('img');
             const title = el.querySelector('h4');
             const desc = el.querySelector('p');
-            lightboxImg.src = img.src.replace('/800/600', '/1400/1050');
+
+            let images = [];
+            if (el.dataset.images) {
+                try { images = JSON.parse(el.dataset.images); } catch (err) { images = []; }
+            }
+            // Fallback: if no predefined carousel images are set, just show the thumbnail
+            carouselImages = images.length ? images : [img.src];
+            carouselIndex = 0;
+
             lightboxTitle.textContent = title ? title.textContent : '';
             lightboxDesc.textContent = desc ? desc.textContent : '';
+
+            renderCarouselImage();
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox(e) {
-            if (e.target === lightbox || e.currentTarget.tagName === 'BUTTON') {
+            if (e.target === lightbox || e.currentTarget.tagName === 'BUTTON' || e.currentTarget.closest?.('button')) {
                 lightbox.classList.remove('active');
                 document.body.style.overflow = '';
             }
         }
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') {
                 lightbox.classList.remove('active');
                 document.body.style.overflow = '';
+            } else if (e.key === 'ArrowRight') {
+                nextLightboxImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevLightboxImage();
             }
         });
 
