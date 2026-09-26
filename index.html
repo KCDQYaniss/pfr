@@ -7,52 +7,52 @@
     <link rel="icon" href="logopfr.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: { sans: ['Public Sans', 'sans-serif'], serif: ['Fraunces', 'serif'] },
                 },
             },
         };
     </script>
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="text-white antialiased overflow-x-hidden">
+<body class="text-[#241F17] antialiased overflow-x-hidden">
 
     <!-- ============ NAVBAR (parfaitement alignée) ============ -->
     <nav class="fixed top-0 left-0 right-0 z-50 pt-3">
         <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-            <div class="navbar-shell flex items-center justify-between gap-2 h-14 sm:h-16 px-2.5 sm:px-4 rounded-xl bg-[#0B0A08]/80 backdrop-blur-xl border border-white/5 overflow-hidden">
+            <div class="navbar-shell flex items-center justify-between gap-2 h-14 sm:h-16 px-2.5 sm:px-4 rounded bg-[#F3ECDC]/90 backdrop-blur-xl border border-[#241F17]/12 overflow-hidden">
 
                 <!-- Logo + nom -->
                 <a href="#accueil" class="flex items-center gap-2 min-w-0 overflow-hidden">
-                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-7 sm:h-9 w-auto rounded-lg flex-shrink-0" />
-                    <span class="text-sm sm:text-lg font-semibold tracking-tight whitespace-nowrap truncate">
-                        Provence Façade Rénovation      
+                    <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-7 sm:h-9 w-auto rounded-none flex-shrink-0" />
+                    <span class="font-serif text-sm sm:text-lg font-medium tracking-tight whitespace-nowrap truncate">
+                        Provence Façade Rénovation
                     </span>
                 </a>
 
                 <!-- Liens desktop -->
                 <div class="hidden md:flex items-center gap-6 lg:gap-8 flex-shrink-0">
-                    <a href="#accueil" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Accueil</a>
-                    <a href="#services" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Services</a>
-                    <a href="#realisations" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Réalisations</a>
-                    <a href="#apropos" class="nav-link text-sm font-light text-neutral-400 hover:text-white">À propos</a>
-                    <a href="#contact" class="nav-link text-sm font-light text-neutral-400 hover:text-white">Contact</a>
+                    <a href="#accueil" class="nav-link text-sm font-light text-[#5B5140] hover:text-[#241F17]">Accueil</a>
+                    <a href="#services" class="nav-link text-sm font-light text-[#5B5140] hover:text-[#241F17]">Services</a>
+                    <a href="#realisations" class="nav-link text-sm font-light text-[#5B5140] hover:text-[#241F17]">Réalisations</a>
+                    <a href="#apropos" class="nav-link text-sm font-light text-[#5B5140] hover:text-[#241F17]">À propos</a>
+                    <a href="#contact" class="nav-link text-sm font-light text-[#5B5140] hover:text-[#241F17]">Contact</a>
                 </div>
 
                 <!-- Droite : téléphone + boutons -->
                 <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0 ml-auto">
-                    <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-neutral-400 hover:text-white transition-colors whitespace-nowrap">
+                    <a href="tel:0625284923" class="hidden sm:inline-flex items-center gap-2 text-sm font-light text-[#5B5140] hover:text-[#241F17] transition-colors whitespace-nowrap">
                         <i data-lucide="phone" class="w-3.5 h-3.5"></i>
                         06.25.28.49.23
                     </a>
-                    <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-4 sm:px-5 py-2 rounded-lg whitespace-nowrap">
+                    <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-4 sm:px-5 py-2 rounded whitespace-nowrap">
                         Devis gratuit
                     </a>
-                    <button id="menuToggle" class="md:hidden p-2 text-neutral-400 hover:text-white transition-colors flex-shrink-0 rounded-lg">
+                    <button id="menuToggle" class="md:hidden p-2 text-[#5B5140] hover:text-[#241F17] transition-colors flex-shrink-0 rounded">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -62,50 +62,47 @@
 
     <!-- ============ MOBILE MENU ============ -->
     <div id="mobileMenu" class="mobile-menu">
-        <button id="menuClose" class="absolute top-6 right-8 text-neutral-400 hover:text-white">
+        <button id="menuClose" class="absolute top-6 right-8 text-[#5B5140] hover:text-[#241F17]">
             <i data-lucide="x" class="w-7 h-7"></i>
         </button>
-        <a href="#accueil" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Accueil</a>
-        <a href="#services" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Services</a>
-        <a href="#realisations" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Réalisations</a>
-        <a href="#apropos" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">À propos</a>
-        <a href="#contact" class="text-2xl font-light text-neutral-300 hover:text-white transition-colors mobile-link">Contact</a>
-        <a href="#contact" class="btn-primary text-lg font-medium px-8 py-3 rounded-lg mt-4 mobile-link">Demander un devis</a>
+        <a href="#accueil" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">Accueil</a>
+        <a href="#services" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">Services</a>
+        <a href="#realisations" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">Réalisations</a>
+        <a href="#apropos" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">À propos</a>
+        <a href="#contact" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">Contact</a>
+        <a href="#contact" class="btn-primary text-lg font-medium px-8 py-3 rounded mt-4 mobile-link">Demander un devis</a>
     </div>
 
     <!-- ============ HERO ============ -->
     <section id="accueil" class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
         <div class="absolute inset-0">
-            <img src="https://picsum.photos/seed/provence-facade-hero-cavaillon/1920/1080.jpg" alt="Façade rénovée en Provence" class="w-full h-full object-cover opacity-20" />
-            <div class="absolute inset-0 bg-gradient-to-b from-[#0B0A08] via-[#0B0A08]/60 to-[#0B0A08]"></div>
+            <img src="https://picsum.photos/seed/provence-facade-hero-cavaillon/1920/1080.jpg" alt="Façade rénovée en Provence" class="hero-photo w-full h-full object-cover opacity-40" />
+            <div class="absolute inset-0 bg-gradient-to-b from-[#F3ECDC]/40 via-[#F3ECDC]/75 to-[#F3ECDC]"></div>
         </div>
 
-        <div class="absolute top-1/4 right-1/4 w-96 h-96 hero-glow bg-[#D4835A]/10 rounded-full blur-[100px] pulse-glow"></div>
-        <div class="absolute bottom-1/4 left-1/4 w-64 h-64 hero-glow-secondary bg-[#C49A6C]/10 rounded-full blur-[80px] pulse-glow" style="animation-delay: 1.5s;"></div>
-
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 lg:pt-40 lg:pb-32 text-center">
-            <div class="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D4835A]/10 border border-[#D4835A]/20 mb-8">
-                <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-[#D4835A]"></i>
-                <span class="text-xs font-medium text-neutral-300 tracking-wide">Artisans façadiers — Cavaillon</span>
+            <div class="animate-fade-in-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B5652E]/10 border border-[#B5652E]/20 mb-8">
+                <i data-lucide="heart-handshake" class="w-3.5 h-3.5 text-[#B5652E]"></i>
+                <span class="text-xs font-medium text-[#4A4030] tracking-wide">Artisans façadiers — Cavaillon</span>
             </div>
 
-            <h1 class="animate-fade-in-up delay-200 text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.1] mb-6">
-                <span class="text-white">Rénovation</span><br />
-                <span class="text-white">de façades</span>
-                <span class="text-[#D4835A]">.</span>
+            <h1 class="font-serif animate-fade-in-up delay-200 text-4xl sm:text-5xl lg:text-7xl font-medium tracking-tight leading-[1.05] mb-6">
+                <span class="text-[#241F17]">Rénovation</span><br />
+                <span class="text-[#241F17]">de façades</span>
+                <span class="text-[#B5652E]">.</span>
             </h1>
 
-            <p class="animate-fade-in-up delay-400 text-lg sm:text-xl font-light text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
+            <p class="animate-fade-in-up delay-400 text-lg sm:text-xl font-light text-[#5B5140] max-w-2xl mx-auto mb-10 leading-relaxed tracking-wide">
                 Spécialistes du ravalement, de la peinture et du renouveau de façades à Cavaillon et ses environs.
-                Un savoir-faire de <span class="text-white font-normal">plus de 30 ans</span>.
+                Un savoir-faire de <span class="text-[#241F17] font-normal">plus de 30 ans</span>.
             </p>
 
             <div class="animate-fade-in-up delay-600 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#contact" class="btn-primary text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2">
+                <a href="#contact" class="btn-primary text-sm font-medium px-8 py-3.5 rounded flex items-center gap-2">
                     <i data-lucide="phone" class="w-4 h-4"></i>
                     Demander un devis gratuit
                 </a>
-                <a href="#realisations" class="btn-white text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2">
+                <a href="#realisations" class="btn-white text-sm font-medium px-8 py-3.5 rounded flex items-center gap-2">
                     <i data-lucide="images" class="w-4 h-4"></i>
                     Voir nos réalisations
                 </a>
@@ -114,88 +111,88 @@
             <div class="animate-fade-in-up delay-800 mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto">
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="30">0</div>
-                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Ans d'expérience</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">Ans d'expérience</div>
                 </div>
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="250">0</div>
-                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">Façades traitées</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">Façades traitées</div>
                 </div>
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="98">0</div>
-                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">% Clients satisfaits</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">% Clients satisfaits</div>
                 </div>
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="100">0</div>
-                    <div class="text-xs text-neutral-500 mt-1 tracking-wide">% Artisanal & local</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">% Artisanal & local</div>
                 </div>
             </div>
         </div>
 
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-            <div class="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center p-1.5">
-                <div class="w-1 h-2.5 rounded-full bg-white/40 animate-pulse"></div>
+            <div class="w-6 h-10 rounded-full border-2 border-[#241F17]/20 flex items-start justify-center p-1.5">
+                <div class="w-1 h-2.5 rounded-full bg-[#241F17]/40 animate-pulse"></div>
             </div>
         </div>
     </section>
 
     <!-- ============ SERVICES ============ -->
     <section id="services" class="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-[#241F17]/15 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16 scroll-reveal">
-                <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Nos expertises</span>
-                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Des services complets</h2>
-                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">De l'isolation à la décoration, nous prenons en charge l'intégralité de vos projets de façade.</p>
+                <span class="eyebrow mb-4">Nos expertises</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-4">Des services complets</h2>
+                <p class="text-[#5B5140] font-light text-lg max-w-xl mx-auto">De l'isolation à la décoration, nous prenons en charge l'intégralité de vos projets de façade.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="paintbrush" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="paintbrush" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Ravalement de façade</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Nettoyage, réparation des fissures, enduit et peinture. Nous redonnons vie à votre façade avec des matériaux de qualité professionnelle.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Ravalement de façade</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Nettoyage, réparation des fissures, enduit et peinture. Nous redonnons vie à votre façade avec des matériaux de qualité professionnelle.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="thermometer" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="thermometer" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Isolation thermique (ITE)</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Réduction des déperditions énergétiques grâce à l'isolation par l'extérieur. Éligible aux aides MaPrimeRénov' et éco-PTZ.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Isolation thermique (ITE)</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Réduction des déperditions énergétiques grâce à l'isolation par l'extérieur. Éligible aux aides MaPrimeRénov' et éco-PTZ.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="palette" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="palette" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Peinture extérieure</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Peinture décorative et de protection pour tous types de supports : béton, crépi, pierre.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Peinture extérieure</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Peinture décorative et de protection pour tous types de supports : béton, crépi, pierre.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="shield-check" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Imperméabilisation</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Traitement hydrofuge et étanchéité de façade pour protéger votre bâtiment contre l'humidité, les infiltrations et les salissures.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Imperméabilisation</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Traitement hydrofuge et étanchéité de façade pour protéger votre bâtiment contre l'humidité, les infiltrations et les salissures.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="wrench" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Reprise de maçonnerie</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Réparation des joints, rebouchage de fissures, reconstruction de parties endommagées. Un travail soigné pour une façade durable.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Reprise de maçonnerie</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Réparation des joints, rebouchage de fissures, reconstruction de parties endommagées. Un travail soigné pour une façade durable.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded-[2rem] bg-[#181714] p-8 group" style="transition-delay: 300ms;">
-                    <div class="w-14 h-14 rounded-2xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                        <i data-lucide="droplets" class="w-6 h-6 text-[#D4835A]"></i>
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
+                        <i data-lucide="droplets" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">Nettoyage haute pression</h3>
-                    <p class="text-neutral-400 font-light leading-relaxed text-sm">Décapage par micro-gommage ou nettoyage haute pression. Nous éliminons mousses, lichens, pollutions et tags en toute sécurité.</p>
+                    <h3 class="font-serif text-xl font-medium mb-3">Nettoyage haute pression</h3>
+                    <p class="text-[#5B5140] font-light leading-relaxed text-sm">Décapage par micro-gommage ou nettoyage haute pression. Nous éliminons mousses, lichens, pollutions et tags en toute sécurité.</p>
                 </div>
             </div>
         </div>
@@ -203,47 +200,46 @@
 
     <!-- ============ RÉALISATIONS ============ -->
     <section id="realisations" class="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <div class="absolute top-1/2 left-0 w-96 h-96 section-blob bg-[#D4835A]/5 rounded-full blur-[120px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-[#241F17]/15 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto relative">
             <div class="text-center mb-12 scroll-reveal">
-                <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Portfolio</span>
-                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Nos réalisations</h2>
-                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">Découvrez quelques-uns de nos projets récents à Cavaillon et dans le Vaucluse.</p>
+                <span class="eyebrow mb-4">Portfolio</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-4">Nos réalisations</h2>
+                <p class="text-[#5B5140] font-light text-lg max-w-xl mx-auto">Découvrez quelques-uns de nos projets récents à Cavaillon et dans le Vaucluse.</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-2 mb-10 scroll-reveal">
-                <button class="filter-btn active text-sm font-medium px-5 py-2 rounded-full border border-white/10 bg-[#D4835A]/20 text-white transition-all hover:bg-[#D4835A]/30" data-filter="all">Tous</button>
-                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="ravalement">Ravalement</button>
-                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="ite">ITE</button>
-                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="peinture">Peinture</button>
-                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-white/10 text-neutral-500 transition-all hover:bg-white/5 hover:text-white" data-filter="nettoyage">Nettoyage</button>
+                <button class="filter-btn active text-sm font-medium px-5 py-2 rounded-full border border-[#241F17]/15 bg-[#B5652E]/20 text-[#241F17] transition-all hover:bg-[#B5652E]/30" data-filter="all">Tous</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-[#241F17]/15 text-[#7A6E58] transition-all hover:bg-[#241F17]/[0.04] hover:text-[#241F17]" data-filter="ravalement">Ravalement</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-[#241F17]/15 text-[#7A6E58] transition-all hover:bg-[#241F17]/[0.04] hover:text-[#241F17]" data-filter="ite">ITE</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-[#241F17]/15 text-[#7A6E58] transition-all hover:bg-[#241F17]/[0.04] hover:text-[#241F17]" data-filter="peinture">Peinture</button>
+                <button class="filter-btn text-sm font-medium px-5 py-2 rounded-full border border-[#241F17]/15 text-[#7A6E58] transition-all hover:bg-[#241F17]/[0.04] hover:text-[#241F17]" data-filter="nettoyage">Nettoyage</button>
             </div>
 
             <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" data-images='["img/1/1.png","img/1/2.png","img/1/3.png"]' onclick="openLightbox(this)">
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ravalement" data-images='["img/1/1.png","img/1/2.png","img/1/3.png","img/1/4.png","img/1/5.png","img/1/6.png"]' onclick="openLightbox(this)">
                     <div class="aspect-[4/3]">
-                        <img src="https://picsum.photos/seed/pfr-ravalement-avignon/800/600.jpg" alt="Ravalement immeuble Avignon" class="w-full h-full object-cover" />
+                        <img src="img/1/4.png" alt="Rénovation des tuiles, descente en pvc et d'une partie des façades" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
                             <span class="text-xs text-[#D4835A] font-medium tracking-wide">RAVALEMENT</span>
-                            <h4 class="text-white font-semibold mt-1">Immeuble haussmannien — Avignon</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Ravalement complet avec enduit décoratif</p>
+                            <h4 class="text-white font-semibold mt-1">Toiture d'immeubles — Marseille</h4>
+                            <p class="text-neutral-400 text-sm mt-1">Nettoyage, reprise et peinture</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ite" data-images='["img/2/1.png","img/2/2.png","img/2/3.png"]' onclick="openLightbox(this)" style="transition-delay: 100ms;">
+                <div class="gallery-item cursor-pointer scroll-reveal" data-category="ite" data-images='["img/2/1.png","img/2/2.png","img/2/3.png","img/2/4.png","img/2/5.png","img/2/6.png"]' onclick="openLightbox(this)" style="transition-delay: 100ms;">
                     <div class="aspect-[4/3]">
-                        <img src="https://picsum.photos/seed/pfr-ite-lisle/800/600.jpg" alt="ITE résidence L'Isle-sur-la-Sorgue" class="w-full h-full object-cover" />
+                        <img src="img/2/6.png" alt="Mur de séparation de terrain - Marseille" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">ISOLATION THERMIQUE</span>
-                            <h4 class="text-white font-semibold mt-1">Résidence — L'Isle-sur-la-Sorgue</h4>
-                            <p class="text-neutral-400 text-sm mt-1">ITE polystyrène + enduit finition grattée</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">RAVALEMENT</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Mur de séparation de terrain — Marseille</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Reprise d'enduit et peinture</p>
                         </div>
                     </div>
                 </div>
@@ -254,9 +250,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">PEINTURE</span>
-                            <h4 class="text-white font-semibold mt-1">Villa — Apt</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Peinture pliolite aux tons ocre provençal</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Peinture</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Villa — Apt</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Peinture pliolite aux tons ocre provençal</p>
                         </div>
                     </div>
                 </div>
@@ -267,9 +263,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">NETTOYAGE</span>
-                            <h4 class="text-white font-semibold mt-1">Copropriété — Carpentras</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Micro-gommage et traitement hydrofuge</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Nettoyage</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Copropriété — Carpentras</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Micro-gommage et traitement hydrofuge</p>
                         </div>
                     </div>
                 </div>
@@ -280,9 +276,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">RAVALEMENT</span>
-                            <h4 class="text-white font-semibold mt-1">Maison individuelle — Orange</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Ravalement pierre naturelle + jointoiement</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Ravalement</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Maison individuelle — Orange</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Ravalement pierre naturelle + jointoiement</p>
                         </div>
                     </div>
                 </div>
@@ -293,9 +289,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">ISOLATION THERMIQUE</span>
-                            <h4 class="text-white font-semibold mt-1">Immeuble — Salon-de-Provence</h4>
-                            <p class="text-neutral-400 text-sm mt-1">ITE sous enduit avec isolation des balcons</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Isolation thermique</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Immeuble — Salon-de-Provence</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">ITE sous enduit avec isolation des balcons</p>
                         </div>
                     </div>
                 </div>
@@ -306,9 +302,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">PEINTURE</span>
-                            <h4 class="text-white font-semibold mt-1">Immeuble — Sorgues</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Réfection complète peinture + ravalement léger</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Peinture</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Immeuble — Sorgues</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Réfection complète peinture + ravalement léger</p>
                         </div>
                     </div>
                 </div>
@@ -319,9 +315,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">RAVALEMENT</span>
-                            <h4 class="text-white font-semibold mt-1">Mas provençal — Cabannes</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Enduit taloché ocre + badigeon à la chaux</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Ravalement</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Mas provençal — Cabannes</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Enduit taloché ocre + badigeon à la chaux</p>
                         </div>
                     </div>
                 </div>
@@ -332,9 +328,9 @@
                     </div>
                     <div class="gallery-overlay">
                         <div>
-                            <span class="text-xs text-[#D4835A] font-medium tracking-wide">NETTOYAGE</span>
-                            <h4 class="text-white font-semibold mt-1">Façade pierres — Eygalières</h4>
-                            <p class="text-neutral-400 text-sm mt-1">Nettoyage doux calcaire, démoisage</p>
+                            <span class="text-xs text-[#B5652E] font-medium tracking-wide">Nettoyage</span>
+                            <h4 class="font-serif text-[#241F17] font-medium mt-1">Façade pierres — Eygalières</h4>
+                            <p class="text-[#5B5140] text-sm mt-1">Nettoyage doux calcaire, démoisage</p>
                         </div>
                     </div>
                 </div>
@@ -344,65 +340,64 @@
 
     <!-- ============ À PROPOS ============ -->
     <section id="apropos" class="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <div class="absolute bottom-0 right-0 w-80 h-80 section-blob bg-[#D4835A]/5 rounded-full blur-[100px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-[#241F17]/15 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="scroll-reveal relative">
-                    <div class="rounded-[2rem] overflow-hidden border border-white/5">
+                    <div class="rounded overflow-hidden border border-[#241F17]/10">
                         <img src="https://picsum.photos/seed/pfr-equipe-artisans/800/900.jpg" alt="Équipe Provence Façade Rénovation" class="w-full h-[500px] object-cover" />
                     </div>
-                    <div class="absolute -top-4 -left-4 sm:left-6 bg-[#1A1A1A] border border-white/10 rounded-2xl p-5 backdrop-blur-xl shadow-2xl">
+                    <div class="absolute -top-4 -left-4 sm:left-6 bg-[#F3ECDC] border border-[#241F17]/20 rounded p-5 shadow-none">
                         <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 flex items-center justify-center">
-                                <i data-lucide="users" class="w-6 h-6 text-[#D4835A]"></i>
+                            <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/25 flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-[#B5652E]"></i>
                             </div>
                             <div>
-                                <div class="text-white font-semibold text-sm">Artisans passionnés</div>
-                                <div class="text-neutral-500 text-xs">Depuis + de 30 ans</div>
+                                <div class="text-[#241F17] font-semibold text-sm">Artisans passionnés</div>
+                                <div class="text-[#7A6E58] text-xs">Depuis + de 30 ans</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="scroll-reveal" style="transition-delay: 200ms;">
-                    <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Qui sommes-nous</span>
-                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-6">Un savoir-faire<br />d'<span class="text-[#D4835A]">artisans</span> engagés</h2>
-                    <p class="text-neutral-400 font-light leading-relaxed mb-6">
-                        <strong class="text-white font-medium">Provence Façade Rénovation</strong> est une entreprise cavaillonnaise, reconnue pour son exigence de qualité et son respect du client depuis plus de 30 ans.
+                    <span class="eyebrow mb-4">Qui sommes-nous</span>
+                    <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-6">Un savoir-faire<br />d'artisans engagés</h2>
+                    <p class="text-[#5B5140] font-light leading-relaxed mb-6">
+                        <strong class="text-[#241F17] font-medium">Provence Façade Rénovation</strong> est une entreprise cavaillonnaise, reconnue pour son exigence de qualité et son respect du client depuis plus de 30 ans.
                     </p>
-                    <p class="text-neutral-400 font-light leading-relaxed mb-8">
-                        Nous croyons qu'une <strong class="text-white font-medium">belle façade</strong> ne se limite pas à l'esthétique : c'est aussi la garantie d'un <strong class="text-white font-medium">bâtiment protégé, isolé et valorisé</strong>. Chaque projet est traité avec le même soin, de la visite technique jusqu'à la réception des travaux.
+                    <p class="text-[#5B5140] font-light leading-relaxed mb-8">
+                        Nous croyons qu'une <strong class="text-[#241F17] font-medium">belle façade</strong> ne se limite pas à l'esthétique : c'est aussi la garantie d'un <strong class="text-[#241F17] font-medium">bâtiment protégé, isolé et valorisé</strong>. Chaque projet est traité avec le même soin, de la visite technique jusqu'à la réception des travaux.
                     </p>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-start gap-3">
-                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="check" class="w-3 h-3 text-[#D4835A]"></i>
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#B5652E]/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-[#B5652E]"></i>
                             </div>
-                            <span class="text-neutral-300 font-light text-sm">Artisans de métier — <strong class="text-white font-medium">authenticité et confiance</strong></span>
+                            <span class="text-[#4A4030] font-light text-sm">Artisans de métier — <strong class="text-[#241F17] font-medium">authenticité et confiance</strong></span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="check" class="w-3 h-3 text-[#D4835A]"></i>
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#B5652E]/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-[#B5652E]"></i>
                             </div>
-                            <span class="text-neutral-300 font-light text-sm">Garantie <strong class="text-white font-medium">décennale</strong> sur tous nos travaux</span>
+                            <span class="text-[#4A4030] font-light text-sm">Garantie <strong class="text-[#241F17] font-medium">décennale</strong> sur tous nos travaux</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="check" class="w-3 h-3 text-[#D4835A]"></i>
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#B5652E]/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-[#B5652E]"></i>
                             </div>
-                            <span class="text-neutral-300 font-light text-sm">Devis <strong class="text-white font-medium">gratuit et sans engagement</strong>.</span>
+                            <span class="text-[#4A4030] font-light text-sm">Devis <strong class="text-[#241F17] font-medium">gratuit et sans engagement</strong>.</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                                <i data-lucide="check" class="w-3 h-3 text-[#D4835A]"></i>
+                            <div class="mt-0.5 w-5 h-5 rounded-full bg-[#B5652E]/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="w-3 h-3 text-[#B5652E]"></i>
                             </div>
-                            <span class="text-neutral-300 font-light text-sm">Matériaux premium — <strong class="text-white font-medium">Cika, Weber, Parex</strong></span>
+                            <span class="text-[#4A4030] font-light text-sm">Matériaux premium — <strong class="text-[#241F17] font-medium">Cika, Weber, Parex</strong></span>
                         </div>
                     </div>
 
-                    <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-sm font-medium px-8 py-3.5 rounded-lg">
+                    <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-sm font-medium px-8 py-3.5 rounded">
                         <i data-lucide="message-circle" class="w-4 h-4"></i>
                         Prendre contact
                     </a>
@@ -413,32 +408,32 @@
 
     <!-- ============ ZONE INTERVENTION ============ -->
     <section class="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-[#241F17]/15 to-transparent"></div>
 
         <div class="max-w-5xl mx-auto scroll-reveal">
-            <div class="rounded-[2rem] bg-gradient-to-br from-[#181714] to-[#11100E] border border-white/5 p-8 md:p-12">
+            <div class="rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 md:p-12">
                 <div class="text-center mb-8">
-                    <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Zone d'intervention</span>
-                    <h2 class="text-2xl md:text-4xl font-semibold tracking-tight mb-3">Nous intervenons autour de <span class="text-[#D4835A]">Cavaillon</span></h2>
-                    <p class="text-neutral-400 font-light">Dans un rayon de 50 km autour de Cavaillon</p>
+                    <span class="eyebrow mb-4">Zone d'intervention</span>
+                    <h2 class="font-serif text-2xl md:text-4xl font-medium tracking-tight mb-3">Nous intervenons autour de Cavaillon</h2>
+                    <p class="text-[#5B5140] font-light">Dans un rayon de 50 km autour de Cavaillon</p>
                 </div>
                 <div class="flex flex-wrap justify-center gap-3">
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Cavaillon</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Avignon</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">L'Isle-sur-la-Sorgue</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Apt</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Carpentras</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Orange</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Salon-de-Provence</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Sorgues</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Le Pontet</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Morières-lès-Avignon</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Cabannes</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Mollégès</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Orgon</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Eygalières</span>
-                    <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-neutral-300 font-light">Saint-Andiol</span>
-                    <span class="px-4 py-2 rounded-full bg-[#D4835A]/20 border border-[#D4835A]/30 text-sm text-[#D4835A] font-medium">+ toute la région PACA</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Cavaillon</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Avignon</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">L'Isle-sur-la-Sorgue</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Apt</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Carpentras</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Orange</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Salon-de-Provence</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Sorgues</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Le Pontet</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Morières-lès-Avignon</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Cabannes</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Mollégès</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Orgon</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Eygalières</span>
+                    <span class="px-4 py-2 rounded-full bg-[#241F17]/[0.04] border border-[#241F17]/15 text-sm text-[#4A4030] font-light">Saint-Andiol</span>
+                    <span class="px-4 py-2 rounded-full bg-[#B5652E]/20 border border-[#B5652E]/30 text-sm text-[#B5652E] font-medium">+ toute la région PACA</span>
                 </div>
             </div>
         </div>
@@ -446,99 +441,97 @@
 
     <!-- ============ CONTACT ============ -->
     <section id="contact" class="relative py-24 px-4 sm:px-6 lg:px-8">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        <div class="absolute top-1/3 right-0 w-96 h-96 section-blob bg-[#D4835A]/5 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-1/3 left-0 w-64 h-64 section-blob-secondary bg-[#C49A6C]/5 rounded-full blur-[100px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[min(600px,90vw)] h-[1px] bg-gradient-to-r from-transparent via-[#241F17]/15 to-transparent"></div>
 
         <div class="max-w-7xl mx-auto relative">
             <div class="text-center mb-16 scroll-reveal">
-                <span class="inline-block text-xs font-medium tracking-widest text-[#D4835A] uppercase mb-4">Contact</span>
-                <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-4">Parlons de votre <span class="text-[#D4835A]">projet</span></h2>
-                <p class="text-neutral-400 font-light text-lg max-w-xl mx-auto">Décrivez-nous vos besoins, nous vous recontactons sous 48h avec un devis détaillé et gratuit.</p>
+                <span class="eyebrow mb-4">Contact</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-4">Parlons de votre projet</h2>
+                <p class="text-[#5B5140] font-light text-lg max-w-xl mx-auto">Décrivez-nous vos besoins, nous vous recontactons sous 48h avec un devis détaillé et gratuit.</p>
             </div>
 
             <div class="grid lg:grid-cols-5 gap-8">
                 <div class="lg:col-span-2 space-y-6 scroll-reveal">
-                    <a href="tel:0625284923" class="block rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="phone" class="w-5 h-5 text-[#D4835A]"></i>
+                    <a href="tel:0625284923" class="block rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" class="w-5 h-5 text-[#B5652E]"></i>
                         </div>
                         <div>
-                            <h4 class="text-white font-medium text-sm mb-1">Téléphone</h4>
-                            <span class="text-neutral-400 font-light text-sm">06.25.28.49.23</span>
+                            <h4 class="text-[#241F17] font-medium text-sm mb-1">Téléphone</h4>
+                            <span class="text-[#5B5140] font-light text-sm">06.25.28.49.23</span>
                         </div>
                     </a>
 
-                    <a href="mailto:contact@pfrdevis.fr" class="block rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="mail" class="w-5 h-5 text-[#D4835A]"></i>
+                    <a href="mailto:contact@pfrdevis.fr" class="block rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5 text-[#B5652E]"></i>
                         </div>
                         <div>
-                            <h4 class="text-white font-medium text-sm mb-1">Email</h4>
-                            <span class="text-neutral-400 font-light text-sm">devis@pfr.fr</span>
+                            <h4 class="text-[#241F17] font-medium text-sm mb-1">Email</h4>
+                            <span class="text-[#5B5140] font-light text-sm">devis@pfr.fr</span>
                         </div>
                     </a>
 
-                    <div class="rounded-2xl bg-[#181714] border border-white/5 p-6 flex items-start gap-4 card-hover">
-                        <div class="w-12 h-12 rounded-xl bg-[#D4835A]/10 border border-[#D4835A]/20 flex items-center justify-center flex-shrink-0">
-                            <i data-lucide="clock" class="w-5 h-5 text-[#D4835A]"></i>
+                    <div class="rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
+                        <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="clock" class="w-5 h-5 text-[#B5652E]"></i>
                         </div>
                         <div>
-                            <h4 class="text-white font-medium text-sm mb-1">Horaires</h4>
-                            <p class="text-neutral-400 font-light text-sm">Du Lundi au Vendredi de 7h30 à 18h00</p>
+                            <h4 class="text-[#241F17] font-medium text-sm mb-1">Horaires</h4>
+                            <p class="text-[#5B5140] font-light text-sm">Du Lundi au Vendredi de 7h30 à 18h00</p>
                         </div>
                     </div>
 
-                    <div class="rounded-2xl bg-gradient-to-br from-[#D4835A]/10 to-transparent border border-[#D4835A]/20 p-6">
+                    <div class="rounded bg-[#B5652E]/[0.07] border border-[#B5652E]/25 p-6">
                         <div class="flex items-center gap-3 mb-3">
-                            <div class="w-10 h-10 rounded-xl bg-[#D4835A]/20 flex items-center justify-center">
-                                <i data-lucide="zap" class="w-5 h-5 text-[#D4835A]"></i>
+                            <div class="w-10 h-10 rounded-none bg-[#B5652E]/20 border border-[#B5652E]/30 flex items-center justify-center">
+                                <i data-lucide="zap" class="w-5 h-5 text-[#B5652E]"></i>
                             </div>
-                            <h4 class="text-white font-medium text-sm">Réponse rapide</h4>
+                            <h4 class="text-[#241F17] font-medium text-sm">Réponse rapide</h4>
                         </div>
-                        <p class="text-neutral-400 font-light text-sm leading-relaxed">Devis gratuit sous 48h. Appelez-nous directement pour une réponse immédiate.</p>
+                        <p class="text-[#5B5140] font-light text-sm leading-relaxed">Devis gratuit sous 48h. Appelez-nous directement pour une réponse immédiate.</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-3 scroll-reveal" style="transition-delay: 200ms;">
-                    <form id="contactForm" class="rounded-[2rem] bg-[#181714] border border-white/5 p-8 md:p-10 space-y-6">
+                    <form id="contactForm" class="rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 md:p-10 space-y-6">
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Nom complet *</label>
+                                <label class="block text-xs font-medium text-[#7A6E58] mb-2">Nom complet *</label>
                                 <input type="text" name="name" required placeholder="Jean Dupont"
-                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4835A]/50 focus:ring-1 focus:ring-[#D4835A]/30 transition-all" />
+                                    class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                             </div>
                             <div>
-                                <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Téléphone *</label>
+                                <label class="block text-xs font-medium text-[#7A6E58] mb-2">Téléphone *</label>
                                 <input type="tel" name="phone" required placeholder="06 12 34 56 78"
-                                    class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4835A]/50 focus:ring-1 focus:ring-[#D4835A]/30 transition-all" />
+                                    class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Email *</label>
+                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Email *</label>
                             <input type="email" name="email" required placeholder="jean@exemple.fr"
-                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4835A]/50 focus:ring-1 focus:ring-[#D4835A]/30 transition-all" />
+                                class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Ville du chantier</label>
+                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Ville du chantier</label>
                             <input type="text" name="city" placeholder="Cavaillon, Avignon, L'Isle-sur-la-Sorgue..."
-                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4835A]/50 focus:ring-1 focus:ring-[#D4835A]/30 transition-all" />
+                                class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-neutral-400 tracking-wide uppercase mb-2">Description du projet *</label>
+                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Description du projet *</label>
                             <textarea name="message" required rows="4" placeholder="Décrivez votre façade, la surface estimée, vos attentes..."
-                                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-[#D4835A]/50 focus:ring-1 focus:ring-[#D4835A]/30 transition-all resize-none"></textarea>
+                                class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all resize-none"></textarea>
                         </div>
 
                         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                            <p class="text-xs text-neutral-600 font-light">
+                            <p class="text-xs text-[#8F8168] font-light">
                                 <i data-lucide="lock" class="w-3 h-3 inline-block mr-1"></i>
                                 Vos données sont protégées et ne seront jamais partagées.
                             </p>
-                            <button type="submit" class="btn-primary text-sm font-medium px-8 py-3.5 rounded-lg flex items-center gap-2 w-full sm:w-auto justify-center">
+                            <button type="submit" class="btn-primary text-sm font-medium px-8 py-3.5 rounded flex items-center gap-2 w-full sm:w-auto justify-center">
                                 <i data-lucide="send" class="w-4 h-4"></i>
                                 Envoyer ma demande
                             </button>
@@ -550,80 +543,80 @@
     </section>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="border-t border-white/5 py-12 px-4 sm:px-6 lg:px-8">
+    <footer class="border-t border-[#241F17]/10 py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-10 mb-12">
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-4">
-                        <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-9 w-auto rounded-lg" />
+                        <img src="logopfr.png" alt="Provence Façade Rénovation" class="h-9 w-auto rounded-none" />
                         <span class="text-base font-semibold tracking-tight">PFR</span>
                     </div>
-                    <p class="text-neutral-500 font-light text-sm leading-relaxed">
+                    <p class="text-[#7A6E58] font-light text-sm leading-relaxed">
                         Provence Façade Rénovation. Entreprise artisanale, façadier professionnel à Cavaillon depuis plus de 30 ans.
                     </p>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-medium text-white mb-4">Services</h4>
+                    <h4 class="text-sm font-medium text-[#241F17] mb-4">Services</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Ravalement de façade</a></li>
-                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Isolation thermique</a></li>
-                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Peinture extérieure</a></li>
-                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Imperméabilisation</a></li>
-                        <li><a href="#services" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Nettoyage haute pression</a></li>
+                        <li><a href="#services" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Ravalement de façade</a></li>
+                        <li><a href="#services" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Isolation thermique</a></li>
+                        <li><a href="#services" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Peinture extérieure</a></li>
+                        <li><a href="#services" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Imperméabilisation</a></li>
+                        <li><a href="#services" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Nettoyage haute pression</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-medium text-white mb-4">Entreprise</h4>
+                    <h4 class="text-sm font-medium text-[#241F17] mb-4">Entreprise</h4>
                     <ul class="space-y-2.5">
-                        <li><a href="#apropos" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">À propos</a></li>
-                        <li><a href="#realisations" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Réalisations</a></li>
-                        <li><a href="#contact" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Contact</a></li>
-                        <li><a href="#" class="text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">Mentions légales</a></li>
+                        <li><a href="#apropos" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">À propos</a></li>
+                        <li><a href="#realisations" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Réalisations</a></li>
+                        <li><a href="#contact" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">Mentions légales</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-medium text-white mb-4">Contact</h4>
+                    <h4 class="text-sm font-medium text-[#241F17] mb-4">Contact</h4>
                     <ul class="space-y-2.5">
                         <li>
-                            <a href="tel:0625284923" class="flex items-center gap-2 text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">
-                                <i data-lucide="phone" class="w-3.5 h-3.5 text-neutral-600"></i>
+                            <a href="tel:0625284923" class="flex items-center gap-2 text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">
+                                <i data-lucide="phone" class="w-3.5 h-3.5 text-[#8F8168]"></i>
                                 06.25.28.49.23
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:contact@pfrdevis.fr" class="flex items-center gap-2 text-neutral-500 font-light text-sm hover:text-[#D4835A] transition-colors">
-                                <i data-lucide="mail" class="w-3.5 h-3.5 text-neutral-600"></i>
+                            <a href="mailto:contact@pfrdevis.fr" class="flex items-center gap-2 text-[#7A6E58] font-light text-sm hover:text-[#B5652E] transition-colors">
+                                <i data-lucide="mail" class="w-3.5 h-3.5 text-[#8F8168]"></i>
                                 contact@pfrdevis.fr
                             </a>
                         </li>
                     </ul>
                     <div class="flex gap-3 mt-5">
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-[#D4835A] hover:border-[#D4835A]/30 transition-all">
+                        <a href="#" class="w-9 h-9 rounded-none bg-[#241F17]/[0.04] border border-[#241F17]/15 flex items-center justify-center text-[#7A6E58] hover:text-[#B5652E] hover:border-[#B5652E]/40 transition-all">
                             <i data-lucide="facebook" class="w-4 h-4"></i>
                         </a>
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-[#D4835A] hover:border-[#D4835A]/30 transition-all">
+                        <a href="#" class="w-9 h-9 rounded-none bg-[#241F17]/[0.04] border border-[#241F17]/15 flex items-center justify-center text-[#7A6E58] hover:text-[#B5652E] hover:border-[#B5652E]/40 transition-all">
                             <i data-lucide="instagram" class="w-4 h-4"></i>
                         </a>
-                        <a href="#" class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-500 hover:text-[#D4835A] hover:border-[#D4835A]/30 transition-all">
+                        <a href="#" class="w-9 h-9 rounded-none bg-[#241F17]/[0.04] border border-[#241F17]/15 flex items-center justify-center text-[#7A6E58] hover:text-[#B5652E] hover:border-[#B5652E]/40 transition-all">
                             <i data-lucide="linkedin" class="w-4 h-4"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-neutral-600 text-xs font-light">© 2024 Provence Façade Rénovation. Tous droits réservés.</p>
-                <p class="text-neutral-600 text-xs font-light">Façadier RGE — Garantie décennale — Assurance chantier</p>
+            <div class="pt-8 border-t border-[#241F17]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p class="text-[#8F8168] text-xs font-light">© 2024 Provence Façade Rénovation. Tous droits réservés.</p>
+                <p class="text-[#8F8168] text-xs font-light">Façadier RGE — Garantie décennale — Assurance chantier</p>
             </div>
         </div>
     </footer>
 
     <!-- ============ LIGHTBOX / CAROUSEL ============ -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-        <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10">
+        <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-[#F3ECDC]/70 hover:text-[#F3ECDC] transition-colors z-10">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
 
@@ -640,8 +633,8 @@
         </div>
 
         <div id="lightboxCaption" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-center px-4">
-            <h4 class="text-white font-semibold text-lg" id="lightboxTitle"></h4>
-            <p class="text-neutral-400 text-sm mt-1" id="lightboxDesc"></p>
+            <h4 class="font-serif text-[#F3ECDC] font-medium text-lg" id="lightboxTitle"></h4>
+            <p class="text-[#C9BCA0] text-sm mt-1" id="lightboxDesc"></p>
             <div id="lightboxDots" class="lightbox-dots"></div>
         </div>
     </div>
@@ -652,7 +645,7 @@
             <i data-lucide="check-circle" class="w-5 h-5"></i>
             <div>
                 <div class="font-medium text-sm">Demande envoyée !</div>
-                <div class="text-[#D4835A]/70 text-xs mt-0.5">Nous vous recontactons sous 48h.</div>
+                <div class="text-[#B5652E]/70 text-xs mt-0.5">Nous vous recontactons sous 48h.</div>
             </div>
         </div>
     </div>

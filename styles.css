@@ -4,101 +4,113 @@ html, body {
 }
 
 body {
-    background: #0B0A08;
-    font-family: 'Inter', sans-serif;
+    background-color: #F3ECDC;
+    background-image:
+        repeating-linear-gradient(115deg, rgba(36,31,23,0.018) 0px, rgba(36,31,23,0.018) 1px, transparent 1px, transparent 3px),
+        repeating-linear-gradient(25deg, rgba(36,31,23,0.014) 0px, rgba(36,31,23,0.014) 1px, transparent 1px, transparent 4px);
+    font-family: 'Public Sans', sans-serif;
+    color: #241F17;
     position: relative;
 }
 
-/* Animations */
+/* ---------------------------------------------------------
+   Motion — one deliberate hero entrance, quiet everywhere else
+--------------------------------------------------------- */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in-up {
     opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.7s ease-out forwards;
 }
-.delay-200 {
-    animation-delay: 200ms;
-}
-.delay-400 {
-    animation-delay: 400ms;
-}
-.delay-600 {
-    animation-delay: 600ms;
-}
-.delay-800 {
-    animation-delay: 800ms;
-}
+.delay-200 { animation-delay: 150ms; }
+.delay-400 { animation-delay: 280ms; }
+.delay-600 { animation-delay: 400ms; }
+.delay-800 { animation-delay: 520ms; }
 
 @keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-8px); }
 }
 .animate-float {
     animation: float 6s ease-in-out infinite;
 }
 
-@keyframes pulse-glow {
-    0%,
-    100% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.7;
-    }
+/* Section reveal kept minimal: a short settle, not a dramatic slide */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-.pulse-glow {
-    animation: pulse-glow 4s ease-in-out infinite;
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Hero avec dégradés terreux */
-.hero-bg {
-    background:
-        radial-gradient(ellipse at 70% 50%, rgba(212, 131, 90, 0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 30% 80%, rgba(196, 154, 108, 0.10) 0%, transparent 50%);
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-in-up, .scroll-reveal, .animate-float { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
 }
 
-/* Cartes */
+/* ---------------------------------------------------------
+   Hero photo — warmed toward the render/stone palette
+--------------------------------------------------------- */
+.hero-photo {
+    filter: sepia(0.35) saturate(1.05) contrast(1.02) brightness(1.02);
+}
+
+/* ---------------------------------------------------------
+   Eyebrow label — a small ochre tick + plain sentence case,
+   not a tracked-out all-caps pill
+--------------------------------------------------------- */
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #8F4C22;
+}
+.eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 2px;
+    background: #B5652E;
+}
+
+/* ---------------------------------------------------------
+   Cards — hairline border, quiet hover (no float/glow)
+--------------------------------------------------------- */
 .card-hover {
-    transition: all 500ms ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 300ms ease, background-color 300ms ease;
 }
 .card-hover:hover {
-    transform: translateY(-0.5rem);
-    border-color: rgba(212, 131, 90, 0.25);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    border-color: rgba(181, 101, 46, 0.35);
+    background-color: #F1E8D4;
 }
 
-/* Galerie */
+/* ---------------------------------------------------------
+   Gallery
+--------------------------------------------------------- */
 .gallery-item {
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 2px;
     position: relative;
+    border: 1px solid rgba(36, 31, 23, 0.1);
 }
 .gallery-item img {
-    transition: transform 700ms ease, filter 500ms ease;
+    transition: transform 700ms ease;
 }
 .gallery-item:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 .gallery-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(11, 10, 8, 0.92) 0%, rgba(11, 10, 8, 0.1) 50%, transparent 100%);
+    background: linear-gradient(to top, rgba(20, 16, 10, 0.92) 0%, rgba(20, 16, 10, 0.15) 55%, transparent 100%);
     opacity: 0;
-    transition: opacity 400ms ease;
+    transition: opacity 350ms ease;
     display: flex;
     align-items: flex-end;
     padding: 1.5rem;
@@ -106,44 +118,29 @@ body {
 .gallery-item:hover .gallery-overlay {
     opacity: 1;
 }
+.gallery-overlay h4,
+.gallery-overlay p,
+.gallery-overlay span {
+    color: #F3ECDC;
+}
+.gallery-overlay p {
+    color: rgba(243, 236, 220, 0.75);
+}
 
-/* Navigation */
+/* ---------------------------------------------------------
+   Navigation
+--------------------------------------------------------- */
 .navbar-shell {
     overflow: hidden;
 }
-
-section,
-nav,
-footer {
+section, nav, footer {
     overflow-x: hidden;
 }
-
 .section-divider {
     left: 50%;
     transform: translateX(-50%);
     width: min(600px, 90vw);
 }
-
-.hero-glow {
-    max-width: min(24rem, 60vw);
-    max-height: min(24rem, 60vw);
-}
-
-.hero-glow-secondary {
-    max-width: min(16rem, 45vw);
-    max-height: min(16rem, 45vw);
-}
-
-.section-blob {
-    max-width: min(24rem, 70vw);
-    max-height: min(24rem, 70vw);
-}
-
-.section-blob-secondary {
-    max-width: min(16rem, 55vw);
-    max-height: min(16rem, 55vw);
-}
-
 .nav-link {
     position: relative;
     transition: color 150ms;
@@ -155,58 +152,53 @@ footer {
     left: 0;
     width: 0;
     height: 1.5px;
-    background: #D4835A;
+    background: #B5652E;
     transition: width 300ms ease;
 }
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Boutons */
+/* ---------------------------------------------------------
+   Buttons — flat, structural, no neon glow
+--------------------------------------------------------- */
 .btn-primary {
-    background: #D4835A;
-    color: #FFFFFF;
-    transition: all 150ms;
-    box-shadow: 0 0 20px -5px rgba(212, 131, 90, 0.4);
+    background: #B5652E;
+    color: #F8F2E4;
+    border: 1px solid #8F4C22;
+    transition: background-color 150ms, border-color 150ms;
 }
 .btn-primary:hover {
-    background: #C4704A;
-    box-shadow: 0 0 30px -5px rgba(212, 131, 90, 0.6);
+    background: #9C5525;
+    border-color: #7A3F1B;
 }
 
 .btn-white {
-    background: #FFFFFF;
-    color: #0B0A08;
-    transition: all 150ms;
+    background: #F8F2E4;
+    color: #241F17;
+    border: 1px solid rgba(36, 31, 23, 0.18);
+    transition: background-color 150ms, border-color 150ms;
 }
 .btn-white:hover {
-    background: #E5E5E5;
+    background: #EFE6D3;
+    border-color: rgba(36, 31, 23, 0.28);
 }
 
-/* Compteurs */
+/* ---------------------------------------------------------
+   Counters — solid ink, no gradient-text-clip cliché
+--------------------------------------------------------- */
 .counter-value {
-    background: linear-gradient(to right, #D4835A, #FFFFFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #8F4C22;
 }
 
-/* Révélation au scroll */
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
-.scroll-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Lightbox */
+/* ---------------------------------------------------------
+   Lightbox / carousel — stays dark, it's a photo viewer
+--------------------------------------------------------- */
 .lightbox {
     position: fixed;
     inset: 0;
     z-index: 100;
-    background: rgba(11, 10, 8, 0.96);
+    background: rgba(20, 16, 10, 0.96);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -224,19 +216,17 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 .lightbox img {
     max-width: 90vw;
     max-height: 85vh;
-    border-radius: 1rem;
-    transform: scale(0.9);
+    border-radius: 2px;
+    transform: scale(0.94);
     transition: transform 300ms ease;
 }
 .lightbox.active img {
     transform: scale(1);
 }
 
-/* Carousel navigation arrows */
 .lightbox-nav {
     position: absolute;
     top: 50%;
@@ -246,8 +236,8 @@ footer {
     height: 2.75rem;
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(248, 242, 228, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,34 +245,28 @@ footer {
     cursor: pointer;
 }
 .lightbox-nav:hover {
-    background: rgba(212, 131, 90, 0.25);
-    border-color: rgba(212, 131, 90, 0.4);
+    background: rgba(181, 101, 46, 0.35);
+    border-color: rgba(181, 101, 46, 0.55);
     color: #ffffff;
 }
-.lightbox-nav-prev {
-    left: 1rem;
-}
-.lightbox-nav-next {
-    right: 1rem;
-}
+.lightbox-nav-prev { left: 1rem; }
+.lightbox-nav-next { right: 1rem; }
 @media (min-width: 640px) {
     .lightbox-nav-prev { left: 1.5rem; }
     .lightbox-nav-next { right: 1.5rem; }
 }
 
-/* Image counter (e.g. "2 / 5") */
 .lightbox-counter {
     position: absolute;
     top: -2.25rem;
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(248, 242, 228, 0.6);
     letter-spacing: 0.05em;
     display: none;
 }
 
-/* Dot indicators */
 .lightbox-dots {
     display: flex;
     align-items: center;
@@ -294,29 +278,31 @@ footer {
     width: 0.4rem;
     height: 0.4rem;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(248, 242, 228, 0.3);
     cursor: pointer;
     transition: all 200ms ease;
 }
 .lightbox-dot:hover {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(248, 242, 228, 0.55);
 }
 .lightbox-dot.active {
-    background: #D4835A;
+    background: #C97A3D;
     width: 1.1rem;
 }
 
-/* Toast */
+/* ---------------------------------------------------------
+   Toast
+--------------------------------------------------------- */
 .toast {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     z-index: 200;
-    background: #181714;
-    border: 1px solid rgba(212, 131, 90, 0.3);
-    color: #D4835A;
+    background: #241F17;
+    border: 1px solid rgba(181, 101, 46, 0.4);
+    color: #F0B589;
     padding: 1rem 1.5rem;
-    border-radius: 0.75rem;
+    border-radius: 2px;
     transform: translateY(100px);
     opacity: 0;
     transition: all 400ms ease;
@@ -326,12 +312,14 @@ footer {
     opacity: 1;
 }
 
-/* Menu mobile */
+/* ---------------------------------------------------------
+   Mobile menu
+--------------------------------------------------------- */
 .mobile-menu {
     position: fixed;
     inset: 0;
     z-index: 90;
-    background: rgba(11, 10, 8, 0.98);
+    background: rgba(243, 236, 220, 0.98);
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
@@ -356,19 +344,19 @@ html {
     width: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: #0B0A08;
+    background: #F3ECDC;
 }
 ::-webkit-scrollbar-thumb {
-    background: #D4835A;
+    background: #B5652E;
     border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #C4704A;
+    background: #9C5525;
 }
 
-/* Filtres actifs (surcouche artisanale) */
+/* Filtres actifs (galerie) */
 .filter-btn.active {
-    background: rgba(212, 131, 90, 0.20) !important;
-    border-color: rgba(212, 131, 90, 0.40) !important;
-    color: #ffffff !important;
+    background: rgba(181, 101, 46, 0.20) !important;
+    border-color: rgba(181, 101, 46, 0.45) !important;
+    color: #241F17 !important;
 }

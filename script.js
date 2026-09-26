@@ -59,11 +59,11 @@ lucide.createIcons();
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-white/5', 'text-white');
-                    b.classList.add('text-neutral-500');
+                    b.classList.remove('active', 'bg-[#B5652E]/20', 'text-[#241F17]');
+                    b.classList.add('text-[#7A6E58]');
                 });
-                btn.classList.add('active', 'bg-white/5', 'text-white');
-                btn.classList.remove('text-neutral-500');
+                btn.classList.add('active', 'bg-[#B5652E]/20', 'text-[#241F17]');
+                btn.classList.remove('text-[#7A6E58]');
 
                 const filter = btn.dataset.filter;
 
@@ -220,10 +220,10 @@ lucide.createIcons();
         const nav = document.querySelector('nav > div > div');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(0,0,0,0.85)';
-                nav.style.borderColor = 'rgba(255,255,255,0.08)';
+                nav.style.background = 'rgba(243,236,220,0.96)';
+                nav.style.borderColor = 'rgba(36,31,23,0.15)';
             } else {
-                nav.style.background = 'rgba(0,0,0,0.6)';
-                nav.style.borderColor = 'rgba(255,255,255,0.05)';
+                nav.style.background = 'rgba(243,236,220,0.9)';
+                nav.style.borderColor = 'rgba(36,31,23,0.1)';
             }
         });
