@@ -1,7 +1,0 @@
-//Type is in global namespace
-
-internal interface I25851843006f14186907b66589789599
-{
-
-}
-
