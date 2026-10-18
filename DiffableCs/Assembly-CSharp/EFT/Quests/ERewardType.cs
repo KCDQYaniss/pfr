@@ -1,0 +1,36 @@
+namespace EFT.Quests;
+
+public enum ERewardType
+{
+	Experience = 0,
+	Skill = 1,
+	Item = 2,
+	TraderStanding = 3,
+	TraderUnlock = 4,
+	LocationUnlock = 5,
+	Counter = 6,
+	AssortmentUnlock = 7,
+	ProductionScheme = 8,
+	TraderStandingReset = 9,
+	TraderStandingRestore = 10,
+	StashRows = 11,
+	Achievement = 12,
+	Pockets = 13,
+	Quest = 14,
+	CustomizationOffer = 15,
+	ExtraDailyQuest = 16,
+	CustomizationDirect = 17,
+	Stub = 18,
+	WebPromoCode = 19,
+	NotificationPopup = 20,
+	Preset = 21,
+	TraderDialogueUnlock = 22,
+	TraderStandingTick = 23,
+	GlobalVariable = 24,
+	Tarcoin = 25,
+	Customization = 116,
+	BattlePassExperience = 117,
+	BattlePassCurrency = 118,
+	ArenaArmoryItem = 100,
+}
+
