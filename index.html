@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Provence Façade Rénovation — Façadier profesionnel</title>
+    <title>Provence Façade Rénovation — Façadier professionnel</title>
+    <meta name="description" content="Provence Façade Rénovation, façadier à Cavaillon : ravalement, isolation thermique par l'extérieur, peinture et nettoyage de façades. Devis gratuit." />
     <link rel="icon" href="logopfr.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -52,7 +53,7 @@
                     <a href="#contact" class="hidden lg:inline-flex btn-primary text-sm font-medium px-4 sm:px-5 py-2 rounded whitespace-nowrap">
                         Devis gratuit
                     </a>
-                    <button id="menuToggle" class="md:hidden p-2 text-[#5B5140] hover:text-[#241F17] transition-colors flex-shrink-0 rounded">
+                    <button id="menuToggle" aria-label="Ouvrir le menu" class="md:hidden p-2 text-[#5B5140] hover:text-[#241F17] transition-colors flex-shrink-0 rounded">
                         <i data-lucide="menu" class="w-6 h-6"></i>
                     </button>
                 </div>
@@ -62,7 +63,7 @@
 
     <!-- ============ MOBILE MENU ============ -->
     <div id="mobileMenu" class="mobile-menu">
-        <button id="menuClose" class="absolute top-6 right-8 text-[#5B5140] hover:text-[#241F17]">
+        <button id="menuClose" aria-label="Fermer le menu" class="absolute top-6 right-8 text-[#5B5140] hover:text-[#241F17]">
             <i data-lucide="x" class="w-7 h-7"></i>
         </button>
         <a href="#accueil" class="text-2xl font-light text-[#4A4030] hover:text-[#241F17] transition-colors mobile-link">Accueil</a>
@@ -74,7 +75,7 @@
     </div>
 
     <!-- ============ HERO ============ -->
-    <section id="accueil" class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
+    <section id="accueil" class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0">
             <img src="img/mer-bleu-turquoise.jpg" alt="Façade rénovée en Provence" class="hero-photo w-full h-full object-cover opacity-40" />
             <div class="absolute inset-0 bg-gradient-to-b from-[#F3ECDC]/40 via-[#F3ECDC]/75 to-[#F3ECDC]"></div>
@@ -119,11 +120,11 @@
                 </div>
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="98">0</div>
-                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">% Clients satisfaits</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">Clients satisfaits</div>
                 </div>
                 <div class="text-center">
                     <div class="counter-value text-3xl lg:text-4xl font-semibold" data-target="100">0</div>
-                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">% Artisanal & local</div>
+                    <div class="text-xs text-[#7A6E58] mt-1 tracking-wide">Artisanal &amp; local</div>
                 </div>
             </div>
         </div>
@@ -147,7 +148,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="paintbrush" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -155,7 +156,7 @@
                     <p class="text-[#5B5140] font-light leading-relaxed text-sm">Nettoyage, réparation des fissures, enduit et peinture. Nous redonnons vie à votre façade avec des matériaux de qualité professionnelle.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 100ms;">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="thermometer" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -163,7 +164,7 @@
                     <p class="text-[#5B5140] font-light leading-relaxed text-sm">Réduction des déperditions énergétiques grâce à l'isolation par l'extérieur. Éligible aux aides MaPrimeRénov' et éco-PTZ.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 200ms;">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8" style="transition-delay: 200ms;">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="palette" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -171,7 +172,7 @@
                     <p class="text-[#5B5140] font-light leading-relaxed text-sm">Peinture décorative et de protection pour tous types de supports : béton, crépi, pierre.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 100ms;">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="shield-check" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -179,7 +180,7 @@
                     <p class="text-[#5B5140] font-light leading-relaxed text-sm">Traitement hydrofuge et étanchéité de façade pour protéger votre bâtiment contre l'humidité, les infiltrations et les salissures.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 200ms;">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8" style="transition-delay: 200ms;">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="wrench" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -187,7 +188,7 @@
                     <p class="text-[#5B5140] font-light leading-relaxed text-sm">Réparation des joints, rebouchage de fissures, reconstruction de parties endommagées. Un travail soigné pour une façade durable.</p>
                 </div>
 
-                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 group" style="transition-delay: 300ms;">
+                <div class="card-hover scroll-reveal rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8" style="transition-delay: 300ms;">
                     <div class="w-14 h-14 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center mb-6">
                         <i data-lucide="droplets" class="w-6 h-6 text-[#B5652E]"></i>
                     </div>
@@ -220,7 +221,7 @@
             <div id="galleryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div class="gallery-item cursor-pointer scroll-reveal" data-category="peinture ravalement" data-images='["img/1/1.png","img/1/2.png","img/1/3.png","img/1/4.png","img/1/5.png","img/1/6.png"]' onclick="openLightbox(this)">
                     <div class="aspect-[4/3]">
-                        <img src="img/1/4.png" alt="Rénovation des tuiles, descente en pvc et d'une partie des façades" class="w-full h-full object-cover" />
+                        <img loading="lazy" src="img/1/4.png" alt="Rénovation des tuiles, descente en pvc et d'une partie des façades" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
@@ -233,7 +234,7 @@
 
                 <div class="gallery-item cursor-pointer scroll-reveal" data-category="peinture ravalement" data-images='["img/2/1.png","img/2/2.png","img/2/3.png","img/2/4.png","img/2/5.png","img/2/6.png"]' onclick="openLightbox(this)" style="transition-delay: 100ms;">
                     <div class="aspect-[4/3]">
-                        <img src="img/2/6.png" alt="Mur de séparation de terrain - Marseille" class="w-full h-full object-cover" />
+                        <img loading="lazy" src="img/2/6.png" alt="Mur de séparation de terrain - Marseille" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
@@ -245,7 +246,7 @@
                 </div>
                 <div class="gallery-item cursor-pointer scroll-reveal" data-category="peinture" data-images='["img/3/1.png","img/3/2.png","img/3/3.png"]' onclick="openLightbox(this)" style="transition-delay: 200ms;">
                     <div class="aspect-[4/3]">
-                        <img src="img/3/1.png" alt="Peinture immeuble marseille" class="w-full h-full object-cover" />
+                        <img loading="lazy" src="img/3/1.png" alt="Peinture immeuble marseille" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
@@ -258,7 +259,7 @@
 
                 <div class="gallery-item cursor-pointer scroll-reveal" data-category="ite" data-images='["img/4/1.png","img/4/2.png","img/4/3.png","img/4/4.png","img/4/5.png","img/4/6.png"]' onclick="openLightbox(this)">
                     <div class="aspect-[4/3]">
-                        <img src="img/4/6.png" alt="Nettoyage immeuble Carpentras" class="w-full h-full object-cover" />
+                        <img loading="lazy" src="img/4/6.png" alt="Isolation thermique par l'extérieur d'une résidence — Marseille" class="w-full h-full object-cover" />
                     </div>
                     <div class="gallery-overlay">
                         <div>
@@ -268,10 +269,6 @@
                         </div>
                     </div>
                 </div>
-
-               
-                </div>
-                
             </div>
         </div>
     </section>
@@ -284,9 +281,9 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="scroll-reveal relative">
                     <div class="rounded overflow-hidden border border-[#241F17]/10">
-                        <img src="https://picsum.photos/seed/pfr-equipe-artisans/800/900.jpg" alt="Équipe Provence Façade Rénovation" class="w-full h-[500px] object-cover" />
+                        <img loading="lazy" src="https://picsum.photos/seed/pfr-equipe-artisans/800/900.jpg" alt="Équipe Provence Façade Rénovation" class="w-full h-[500px] object-cover" />
                     </div>
-                    <div class="absolute -top-4 -left-4 sm:left-6 bg-[#F3ECDC] border border-[#241F17]/20 rounded p-5 shadow-none">
+                    <div class="absolute -top-4 -left-4 sm:left-6 bg-[#F3ECDC] border border-[#241F17]/20 rounded p-5">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/25 flex items-center justify-center">
                                 <i data-lucide="users" class="w-6 h-6 text-[#B5652E]"></i>
@@ -351,7 +348,6 @@
         <div class="max-w-5xl mx-auto scroll-reveal">
             <div class="rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 md:p-12">
                 <div class="text-center mb-8">
-                  
                     <h2 class="font-serif text-2xl md:text-4xl font-medium tracking-tight mb-3">Zone d'intervention</h2>
                 </div>
                 <div class="flex flex-wrap justify-center gap-3">
@@ -390,7 +386,7 @@
 
             <div class="grid lg:grid-cols-5 gap-8">
                 <div class="lg:col-span-2 space-y-6 scroll-reveal">
-                    <a href="tel:0625284923" class="block rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
+                    <a href="tel:0625284923" class="rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
                         <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="phone" class="w-5 h-5 text-[#B5652E]"></i>
                         </div>
@@ -400,7 +396,7 @@
                         </div>
                     </a>
 
-                    <a href="mailto:contact@pfrdevis.fr" class="block rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
+                    <a href="mailto:contact@pfrdevis.fr" class="rounded bg-[#EDE3CE] border border-[#241F17]/12 p-6 flex items-start gap-4 card-hover">
                         <div class="w-12 h-12 rounded-none bg-[#B5652E]/10 border border-[#B5652E]/30 flex items-center justify-center flex-shrink-0">
                             <i data-lucide="mail" class="w-5 h-5 text-[#B5652E]"></i>
                         </div>
@@ -432,35 +428,40 @@
                 </div>
 
                 <div class="lg:col-span-3 scroll-reveal" style="transition-delay: 200ms;">
-                    <form id="contactForm" class="rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 md:p-10 space-y-6">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="rounded bg-[#EDE3CE] border border-[#241F17]/10 p-8 md:p-10 space-y-6">
+                        <input type="hidden" name="access_key" value="ca5f7542-1f95-4729-9bf6-0df00ab969c1">
+                        <input type="hidden" name="subject" value="Nouvelle demande de devis — Provence Façade Rénovation">
+                        <input type="hidden" name="from_name" value="Site PFR">
+                        <!-- Anti-spam (honeypot Web3Forms) -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
                         <div class="grid sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-medium text-[#7A6E58] mb-2">Nom complet *</label>
-                                <input type="text" name="name" required placeholder="Jean Dupont"
+                                <label for="contact-name" class="block text-xs font-medium text-[#7A6E58] mb-2">Nom complet *</label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Jean Dupont"
                                     class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                             </div>
                             <div>
-                                <label class="block text-xs font-medium text-[#7A6E58] mb-2">Téléphone *</label>
-                                <input type="tel" name="phone" required placeholder="06 12 34 56 78"
+                                <label for="contact-phone" class="block text-xs font-medium text-[#7A6E58] mb-2">Téléphone *</label>
+                                <input type="tel" id="contact-phone" name="phone" required placeholder="06 12 34 56 78"
                                     class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Email *</label>
-                            <input type="email" name="email" required placeholder="jean@exemple.fr"
+                            <label for="contact-email" class="block text-xs font-medium text-[#7A6E58] mb-2">Email *</label>
+                            <input type="email" id="contact-email" name="email" required placeholder="jean@exemple.fr"
                                 class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Ville du chantier</label>
-                            <input type="text" name="city" placeholder="Cavaillon, Avignon, L'Isle-sur-la-Sorgue..."
+                            <label for="contact-city" class="block text-xs font-medium text-[#7A6E58] mb-2">Ville du chantier</label>
+                            <input type="text" id="contact-city" name="city" placeholder="Cavaillon, Avignon, L'Isle-sur-la-Sorgue..."
                                 class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all" />
                         </div>
 
                         <div>
-                            <label class="block text-xs font-medium text-[#7A6E58] mb-2">Description du projet *</label>
-                            <textarea name="message" required rows="4" placeholder="Décrivez votre façade, la surface estimée, vos attentes..."
+                            <label for="contact-message" class="block text-xs font-medium text-[#7A6E58] mb-2">Description du projet *</label>
+                            <textarea id="contact-message" name="message" required rows="4" placeholder="Décrivez votre façade, la surface estimée, vos attentes..."
                                 class="w-full bg-[#241F17]/[0.04] border border-[#241F17]/15 rounded px-4 py-3 text-sm text-[#241F17] placeholder-[#8F8168] focus:outline-none focus:border-[#B5652E]/50 focus:ring-1 focus:ring-[#B5652E]/30 transition-all resize-none"></textarea>
                         </div>
 
@@ -535,7 +536,7 @@
             </div>
 
             <div class="pt-8 border-t border-[#241F17]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p class="text-[#8F8168] text-xs font-light">© 2024 Provence Façade Rénovation. Tous droits réservés.</p>
+                <p class="text-[#8F8168] text-xs font-light">© 2026 Provence Façade Rénovation. Tous droits réservés.</p>
                 <p class="text-[#8F8168] text-xs font-light">Façadier RGE — Garantie décennale — Assurance chantier</p>
             </div>
         </div>
@@ -543,14 +544,14 @@
 
     <!-- ============ LIGHTBOX / CAROUSEL ============ -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-        <button onclick="closeLightbox(event)" class="absolute top-6 right-6 text-[#F3ECDC]/70 hover:text-[#F3ECDC] transition-colors z-10">
+        <button onclick="closeLightbox(event)" aria-label="Fermer" class="absolute top-6 right-6 text-[#F3ECDC]/70 hover:text-[#F3ECDC] transition-colors z-10">
             <i data-lucide="x" class="w-8 h-8"></i>
         </button>
 
-        <button id="lightboxPrev" onclick="prevLightboxImage(event)" class="lightbox-nav lightbox-nav-prev">
+        <button id="lightboxPrev" aria-label="Image précédente" onclick="prevLightboxImage(event)" class="lightbox-nav lightbox-nav-prev">
             <i data-lucide="chevron-left" class="w-6 h-6 sm:w-8 sm:h-8"></i>
         </button>
-        <button id="lightboxNext" onclick="nextLightboxImage(event)" class="lightbox-nav lightbox-nav-next">
+        <button id="lightboxNext" aria-label="Image suivante" onclick="nextLightboxImage(event)" class="lightbox-nav lightbox-nav-next">
             <i data-lucide="chevron-right" class="w-6 h-6 sm:w-8 sm:h-8"></i>
         </button>
 
@@ -567,12 +568,12 @@
     </div>
 
     <!-- ============ TOAST ============ -->
-    <div id="toast" class="toast">
+    <div id="toast" class="toast" role="status" aria-live="polite">
         <div class="flex items-center gap-3">
-            <i data-lucide="check-circle" class="w-5 h-5"></i>
+            <span id="toastIcon" class="flex-shrink-0"><i data-lucide="check-circle" class="w-5 h-5"></i></span>
             <div>
-                <div class="font-medium text-sm">Demande envoyée !</div>
-                <div class="text-[#B5652E]/70 text-xs mt-0.5">Nous vous recontactons sous 48h.</div>
+                <div id="toastTitle" class="font-medium text-sm">Demande envoyée !</div>
+                <div id="toastText" class="text-[#B5652E]/70 text-xs mt-0.5">Nous vous recontactons sous 48h.</div>
             </div>
         </div>
     </div>

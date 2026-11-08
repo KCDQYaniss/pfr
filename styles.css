@@ -136,11 +136,6 @@ body {
 section, nav, footer {
     overflow-x: hidden;
 }
-.section-divider {
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(600px, 90vw);
-}
 .nav-link {
     position: relative;
     transition: color 150ms;
